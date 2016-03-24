@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="renderer" content="webkit">
+	<meta name="apple-mobile-web-app-capable" content="no">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<title>登录</title>
+	<link href="styles/common.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg_white js_modal_open">
+	<div class="pane_onepage">
+		<div class="formbox">
+			<div class="logo selectno"><img src="images/logo.png" class="selectno"></div>
+			<div class="title">小熊到管理</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+				
+			</div>
+			<div class="buttonbox">
+				<button class="btn btn_green btn_screen " tabindex="3" onclick="location.href='index.html'">确定登录</button>
+			</div>
+			
+		</div>
+	</div>
+	<!-- end pane_onepage -->
+	
+	<!-- //提示 开始 -->
+	<div class="modal js_modal_001">
+	  <div class="modal_dialog_tips showtips">
+	    <div class="modal_content">
+	    	<div class="mcs_img">
+	    		<div class="loadingbox" style="display:none;">
+					<img src="images/loading.gif">
+				</div>
+				<!-- //处理中 -->
+				<div class="successbox">
+					<span class="icon"></span>
+				</div>
+				<!-- //处理成功 -->
+				<div class="failurebox"  style="display:none;">
+					<span class="icon"></span>
+				</div>
+				<!-- //处理失败 -->
+	    	</div>
+	    	<div class="mcs_text">
+	    		已发送
+	    	</div>
+	    </div>
+	  </div>
+	  <div class="modal_cover"></div>
+	</div>
+	<!-- //提示 结束 -->
+	
+	<!-- start javascript -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- end javascript -->
+	
+	
+</body>
+</html>
