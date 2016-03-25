@@ -58,6 +58,9 @@ body.bg_white {background: #fff;}
 .text_center {text-align: center;}
 .container {margin: 0;padding: 0;}
 .gegege{color: #999;margin: 0 1px;}
+/*新增*/
+.show{display:block;}
+.hidden{display:none;}
 
 
 /* 通用按钮 开始 */
@@ -510,10 +513,8 @@ textarea[readonly] {
 /* 显示菜单 开始 */
 
 
-.show_menubox {display: none;}
-.show_menubox.is_show {display: block;}
-.show_menubox .show_menubox_transition {
-    display: block;
+.show_menubox_transition {
+    display: none;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -524,35 +525,35 @@ textarea[readonly] {
     -webkit-transition: background .3s;
     transition: background .3s;
 }
-.show_menubox .show_menubox_content {
-    position: fixed;
-    left: 0;
+.show_menubox_content {
+    position: absolute;
+    left: -80%;
     top: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     z-index: 2;
+    display: block;
     height: 100%;
     width: 70%;
+    max-width: 420px;
     background-color: rgba(0, 25, 50, 1); 
-    -webkit-transition: -webkit-transform .3s;
+     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
     transform: translate(0, 0);
     -webkit-box-shadow:0 0 40px 15px rgba(0, 0, 0, 0.3);  
-	-moz-box-shadow:0 0 40px 15px rgba(0, 0, 0, 0.3);  
-	box-shadow:0 0 40px 15px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow:0 0 40px 15px rgba(0, 0, 0, 0.3);  
+    box-shadow:0 0 40px 15px rgba(0, 0, 0, 0.3); 
 }
 
-.show_menubox .show_userinfo {height: 50px;display: block;padding: 10px 0px 10px 80px;position: relative;text-align: left;background: rgba(251, 251, 251, 0.1);}
+.show_menubox_content .show_userinfo {height: 50px;display: block;padding: 10px 0px 10px 80px;position: relative;text-align: left;background: rgba(251, 251, 251, 0.1);}
 
-.show_menubox .show_userinfo .user_avatar {width: 50px;height: 50px;position: absolute;left: 15px;top:10px;}
-.show_menubox .show_userinfo .user_avatar img {width: 50px;height: 50px;border-radius: 50%;}
-.show_menubox .show_userinfo .user_info {}
-.show_menubox .show_userinfo .user_info .name {color: rgba(251, 251, 251, 0.9);font-size: 15px;}
-.show_menubox .show_userinfo .user_info .mobi {color: rgba(251, 251, 251, 0.7);}
+.show_menubox_content .show_userinfo .user_avatar {width: 50px;height: 50px;position: absolute;left: 15px;top:10px;}
+.show_menubox_content .show_userinfo .user_avatar img {width: 50px;height: 50px;border-radius: 50%;}
+.show_menubox_content .show_userinfo .user_info {}
+.show_menubox_content .show_userinfo .user_info .name {color: rgba(251, 251, 251, 0.9);font-size: 15px;}
+.show_menubox_content .show_userinfo .user_info .mobi {color: rgba(251, 251, 251, 0.7);}
 
-.show_menubox .show_menu {}
+.show_menubox_content .show_menu {}
 
 
 .xxd_cells {display: block;}
