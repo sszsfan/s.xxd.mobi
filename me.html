@@ -10,43 +10,105 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<title>王二五</title>
+	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
 	<link href="styles/common.css" rel="stylesheet" type="text/css">
 </head>
-<body class="bg_white">
-	<div class="user_info_box">
-		<div class="user_avatar">
-			<img src="images/avatar_user.png" />
+<body>
+	<div class="top_toolbar">
+		<div class="open_menubox" id="js_open_menubox">
+			<a href="javascript:void(0);">菜单</a>
 		</div>
-		<div class="user_name">
-			王大五 <span class="gegege">-</span> 13699199469
+		<!-- //open_menubox -->
+		<div class="top_toolbar_content">
+			我的收成
 		</div>
-	</div>
-	<!-- //user_info_box -->
-	<div class="twomenu">
-		<div class="memu_item">
-			<a href="javascript:void(0);" class="price border_line border_r_b">
-				<div class="text">本月订单</div>
-				<div class="show">89949 <i>笔</i></div>
-			</a>
-		</div>
-		<div class="memu_item">
-			<a href="javascript:void(0);" class="price border_line border_r_b">
-				<div class="text">今日订单</div>
-				<div class="show">120 <i>笔</i></div>
-			</a>
-		</div>
-	</div>
-	<!-- //twomenu -->
+		<!-- //top_toolbar_content -->
+	</div><!-- //top_toolbar -->
 	
-	<div class="bottombox border_line_h border_t">
-		<div class="cancelinner border_line_h border_r">
-			<a href="index.html"><span>主页</span></a>
+	<div class="main">
+		
+		<div class="weui_cells weui_cells_access" style="margin-top: 0;">
+            <a class="weui_cell" href="me_setup.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="user_info_box">
+						<div class="user_avatar">
+							<img src="images/avatar_user.png" />
+						</div>
+						<div class="user_info">
+							<div class="name">王大五</div>
+							<div class="mobi">13699199469</div>
+						</div>
+					</div>
+					<!-- //user_info_box -->
+                </div>
+                <div class="weui_cell_ft"></div>
+            </a>
+        </div>
+        <div class="weui_cells weui_cells_access">
+            <a class="weui_cell" href="javascript:;">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>余额</p>
+                </div>
+                <div class="weui_cell_ft">9728.60</div>
+            </a>
+        </div>
+		
+		
+		<div class="weui_cells weui_cells_access">
+            <a class="weui_cell" href="me_income_date.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>今日收成</p>
+                </div>
+                <div class="weui_cell_ft">786.00</div>
+            </a>
+            <a class="weui_cell" href="me_income_month.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>本月收成</p>
+                </div>
+                <div class="weui_cell_ft">7897688.00</div>
+            </a>
+        </div>	
+	</div>
+	<!-- //main -->
+	
+	<!-- //显示菜单 开始 -->
+	<div class="show_menubox" id="js_show_menubox"> 
+		<div class="show_menubox_transition"></div>  
+		<div class="show_menubox_content" >
+			<div class="show_userinfo">
+				<div class="user_avatar">
+					<img src="images/avatar_user.png" />
+				</div>
+				<div class="user_info">
+					<div class="name">王大五</div>
+					<div class="mobi">13699199469</div>
+				</div>
+			</div>
+			<!-- //show_userinfo -->
+		    <div class="show_menu">
+				<div class="xxd_cells">
+		            <a class="xxd_cell" href="index.html">
+			            <div class="xxd_cell_icon"></div>
+		                <div class="xxd_cell_bd">
+		                    <p>管理中心</p>
+		                </div>
+		            </a>
+		            <a class="xxd_cell" href="me.html">
+		                <div class="xxd_cell_bd">
+		                    <p>我的收成</p>
+		                </div>
+		            </a>
+		        </div>
+			</div>
+			<!-- //show_menu -->
 		</div>
-		<!-- //cancelinner -->
-		<div class="bb_c_inner">
-			<button class="btn_s btn_green">刷新</button>
-		</div>
-		<!-- //bb_c_inner -->
-	</div><!-- //bottombox -->
+		<!-- //show_menubox_content -->	
+	</div>
+	<!-- //显示菜单 结束 -->
+	
+	<!-- start javascript -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- end javascript -->
 </body>
 </html>
