@@ -117,6 +117,7 @@ jQuery(document).ready(function($){
 		$('.js_show_success').removeClass('is_show');
 	});
 	
+/*	
 	//显示菜单
 	$('#js_open_menubox').on('click', function(event){
 		$('#js_show_menubox').addClass('is_show');
@@ -125,6 +126,7 @@ jQuery(document).ready(function($){
 	$('#js_open_show_page').on('click', function(event){
 		$('#js_show_page').addClass('is_show');
 	});
+*/	
 	//压栈close
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_page').removeClass('is_show');
