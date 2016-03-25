@@ -58,11 +58,10 @@ body.bg_white {background: #fff;}
 .text_center {text-align: center;}
 .container {margin: 0;padding: 0;}
 .gegege{color: #999;margin: 0 1px;}
-<<<<<<< HEAD
+
 /*新增*/
 .show{display:block;}
 .hidden{display:none;}
-=======
 .imgbox {display: inline;}
 .img60 {width: 60px;height: 60px;}
 >>>>>>> develop
