@@ -58,6 +58,8 @@ body.bg_white {background: #fff;}
 .text_center {text-align: center;}
 .container {margin: 0;padding: 0;}
 .gegege{color: #999;margin: 0 1px;}
+.imgbox {display: inline;}
+.img60 {width: 60px;height: 60px;}
 
 
 /* 通用按钮 开始 */
@@ -157,6 +159,15 @@ textarea[readonly] {
 .table_screen td {font-size: 14px;;color:#333;word-break:break-all; word-wrap:break-word;padding: 10px 20px 10px 20px;}
 .table_screen.have_border_bottom td {border-bottom: 1px solid #e7e7e7;}
 /* 通用表格 结束 */
+
+/* 我的推广码 开始 */
+.myqrcode .qrcode {display: block;width: 180px;height: 180px;padding: 10px;background: #fff;margin: 40px auto 20px;}
+.myqrcode .qrcode img {width: 180px;height: 180px;}
+.myqrcode .desc {text-align: center;display: block;letter-spacing:0px;text-align: center;}
+
+
+/* 我的推广码 结束 */
+
 
 
 /* 新的页面框架 开始 */
