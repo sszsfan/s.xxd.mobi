@@ -65,9 +65,6 @@ function showMenu (){
 function touchMove(){
 	var wrap = document.getElementById("js_show_menuwrap");
 	var dwidth = -0.8*(document.body.scrollWidth);
-	touch.on('#js_show_menubox', 'touchstart', function(ev){
-		ev.preventDefault();
-	});
 	var box = document.getElementById("js_show_menubox");
 	touch.on(box, 'swipeleft', function(ev){
 		wrap.style.display="none";
