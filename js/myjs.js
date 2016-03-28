@@ -52,20 +52,14 @@ function showMenu (){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
 	};
-	/*wrap.addEventListener('touchmove', function(event) {
-		 // 如果这个元素的位置内只有一个手指的话
-		if (event.targetTouches.length == 1) {
-	　　　　 event.preventDefault();// 阻止浏览器默认事件，重要 
-			var touch = event.targetTouches[0];
-			// 把元素放在手指所在的位置
-			moveElement("js_show_menubox",-300,10);
-			}
-	}, false);  */ 
 }
 function touchMove(){
 	var wrap = document.getElementById("js_show_menuwrap");
 	var dwidth = -0.8*(document.body.scrollWidth);
 	var box = document.getElementById("js_show_menubox");
+	touch.on('#js_show_menuwrap', 'touchstart', function(ev){
+		ev.preventDefault();
+	});
 	touch.on(box, 'swipeleft', function(ev){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
