@@ -127,4 +127,14 @@ jQuery(document).ready(function($){
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_page').removeClass('is_show');
 	});
+	
+	//压栈open－收支明细详情
+	$('.js_open_inoutdetail').on('click', function(event){
+		$('#js_show_inoutdetail').addClass('is_show');
+	});
+	
+	//压栈close－收支明细详情
+	$('#js_close_show_page').on('click', function(event){
+		$('#js_show_inoutdetail').removeClass('is_show');
+	});
 });
