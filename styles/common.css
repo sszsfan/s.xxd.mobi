@@ -58,6 +58,7 @@ body.bg_white {background: #fff;}
 .text_center {text-align: center;}
 .container {margin: 0;padding: 0;}
 .gegege{color: #999;margin: 0 1px;}
+.bd {padding: 15px;}
 
 /*新增*/
 .show{display:block;}
@@ -189,10 +190,10 @@ textarea[readonly] {
     content: " ";
     position: absolute;
     left: 0;
-    bottom: -1px;;
+    bottom: 0px;;
     width: 100%;
     height: 1px;
-    border-top: 1px solid #BCBAB6;
+    border-bottom: 1px solid #BCBAB6;
     color: #D9D9D9;
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
@@ -208,6 +209,10 @@ textarea[readonly] {
 .top_toolbar .close_show_page a {width: 40px;height: 40px;overflow: hidden;line-height: 40px;text-align: center;background-image: url("../images/icon_global.png");background-repeat: no-repeat;background-size: 200px 800px;background-position: -40px -180px;text-indent: -9999px;display: block;border-radius: 6px;}
 .top_toolbar .close_show_page a:active {background-color: #e7e7e7;}
 
+
+.top_toolbar .tool_button {position: absolute;height: 40px;overflow: hidden;right: 10px;top:5px;bottom: 0;text-align: right;}
+.top_toolbar .tool_button a {height: 40px;overflow: hidden;line-height: 40px;text-align: right;padding:0 5px; display: inline-block;border-radius: 6px;}
+.top_toolbar .tool_button a:active {background-color: #e7e7e7;}
 
 /* 顶部工具栏 结束 */
 
@@ -484,6 +489,79 @@ textarea[readonly] {
 .batch_list_box .batch_item a:active {background:#efeff4;}
 /* 批次列表 结束 */
 
+/* xxd_cell 开始 */
+.xxd_cell_box {margin: 0;padding: 0px 0px 50px 0px;position: absolute;top:50px;left: 0px;right: 0px;}
+.xxd_cell_box .xxd_cell_item {margin-bottom: 0px;position: relative;}
+.xxd_cell_box .xxd_cell_item:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #BCBAB6;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.xxd_cell_box .xxd_cell_item a {display: block;margin: 0;padding: 5px 15px;background: #fff;}
+.xxd_cell_box .xxd_cell_item a .tname {height: 30px;line-height: 30px;font-size: 18px;color: #000;font-weight: 600;}
+.xxd_cell_box .xxd_cell_item a .tname .to {font-weight: normal;font-size: 12px;color: #999;}
+.xxd_cell_box .xxd_cell_item a .intro {height: 22px;line-height: 22px;color: #666;font-weight: normal;}
+.xxd_cell_box .xxd_cell_item a .date {height: 22px;line-height: 22px;color: #666;font-weight: normal;}
+.xxd_cell_box .xxd_cell_item a .floatbox {position: absolute;right:15px;height: 40px;line-height: 40px;top: 50%;margin-top: -20px;}
+.xxd_cell_box .xxd_cell_item a .floatbox .num {font-size: 26px;font-weight: 300;}
+.xxd_cell_box .xxd_cell_item a:active {background:#efeff4;}
+/* xxd_cell 结束 */
+
+/* 项目详细 开始 */
+.cell_detail_box {display: block;}
+.cell_detail_box .cell_detail_head {position: relative;padding: 10px 15px;height: 40px;display: block;background: #fff;}
+.cell_detail_box .cell_detail_head:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #BCBAB6;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.cell_detail_box .cell_detail_head .title {height: 40px;line-height: 40px;text-align: left;color: #666;float: left;}
+.cell_detail_box .cell_detail_head .value {height: 40px;line-height: 40px;text-align: right;float: right;font-size: 22px;}
+
+.cell_detail_box .cell_detail_content {position: relative;padding: 10px 15px;display: block;background: #fff;}
+.cell_detail_box .cell_detail_content:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #BCBAB6;
+    color: #D9D9D9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.cell_detail_box .cell_detail_content ul li {display: block;padding: 5px 0px 5px 100px;position: relative;line-height: 20px;word-wrap:break-word;
+word-break:break-all;color: #000;text-align: right;}
+.cell_detail_box .cell_detail_content ul li .title {width:90px; height: 20px;line-height: 20px;padding: 5px 0;position: absolute;left:0;top:0;color: #666;text-align: left;}
+.cell_detail_box .cell_detail_content ul li .long {font-size: 10px;}
+
+/* 项目详细 结束 */
+
+
+
+
+
 
 
 /* 扫一扫确认 开始 */
@@ -750,6 +828,11 @@ body {font-size: 12px;}
 .batch_list_box .batch_item a .intro {height: 18px;line-height: 18px;}
 .batch_list_box .batch_item a .date {height: 18px;line-height: 18px;}
 .batch_list_box .batch_item a .floatbox .num {font-size: 20px;}
+
+.xxd_cell_box .xxd_cell_item a .tname {font-size: 14px;height: 22px;line-height: 22px;}
+.xxd_cell_box .xxd_cell_item a .intro {height: 18px;line-height: 18px;}
+.xxd_cell_box .xxd_cell_item a .date {height: 18px;line-height: 18px;}
+.xxd_cell_box .xxd_cell_item a .floatbox .num {font-size: 20px;}
 
 .pane_onepage .formbox .logo {height: 60px; margin: 0 auto 10px;text-align: center;}
 .pane_onepage .formbox .logo img {width: 60px;height:60px;}
