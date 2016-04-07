@@ -42,18 +42,33 @@ function showMenu (){
 	var btn = document.getElementById("js_open_menubox");
 	var wrap = document.getElementById("js_show_menuwrap");
 	var box = document.getElementById("js_show_menubox");
+	var bd = document.getElementById("bd");
 	var dwidth = -0.8*(document.body.scrollWidth);
 	btn.onclick = function(){
 		wrap.style.display="block";
 		box.style.display="block";
 		moveElement("js_show_menubox",0,10);
-		document.body.style.overflow = "hidden";
+		if(document.addEventListener){
+			document.addEventListener("touchmove",fun,false);
+			bd.addEventListener("DOMMouseScroll",fun,false);
+		}else{
+			alert("failed addEventListener");
+		}
 	};
 	wrap.onclick = function(){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
-		document.body.style.overflow = "auto";
+		if(document.removeEventListener){
+			document.removeEventListener("touchmove",fun,false);
+			bd.removeEventListener("DOMMouseScroll",fun,false);
+		}else{
+			alert("failed removeEventListener");
+		}
 	};
+	function fun(e){
+			e.preventDefault();
+   	  e.stopPropagation();
+	}
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
 		if (event.targetTouches.length == 1) {
