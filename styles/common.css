@@ -622,12 +622,12 @@ word-break:break-all;color: #000;text-align: right;}
     transition: background .3s;
 }
 .show_menubox_content {
-    position: absolute;
+    position: fixed;
     left: -80%;
     top: 0;
+    bottom:0;
     z-index: 2;
     display: block;
-    height: 100%;
     width: 70%;
     max-width: 420px;
     background-color: rgba(0, 25, 50, 1); 
