@@ -121,20 +121,33 @@ jQuery(document).ready(function($){
 	//压栈open
 	$('#js_open_show_page').on('click', function(event){
 		$('#js_show_page').addClass('is_show');
+		$('.js_container').addClass('is_lock');
 	});
-	
 	//压栈close
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_page').removeClass('is_show');
+		$('.js_container').removeClass('is_lock');
 	});
 	
 	//压栈open－收支明细详情
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
+		$('.js_container').addClass('is_lock');
 	});
-	
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
+		$('.js_container').removeClass('is_lock');
+	});
+	
+	//压栈open－验证手机短信
+	$('.js_open_checksms').on('click', function(event){
+		$('#js_show_checksms').addClass('is_show');
+		$('.js_container').addClass('is_lock');
+	});
+	//压栈close－验证手机短信
+	$('#js_close_show_page').on('click', function(event){
+		$('#js_show_checksms').removeClass('is_show');
+		$('.js_container').removeClass('is_lock');
 	});
 });
