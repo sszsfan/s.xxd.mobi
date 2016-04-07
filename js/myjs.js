@@ -47,10 +47,12 @@ function showMenu (){
 		wrap.style.display="block";
 		box.style.display="block";
 		moveElement("js_show_menubox",0,10);
+		document.body.style.overflow="hidden";
 	};
 	wrap.onclick = function(){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
+		document.body.style.overflow="auto";
 	};
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
@@ -69,10 +71,12 @@ function touchMove(){
 	touch.on(box, 'swipeleft', function(ev){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
+		document.body.style.overflow="auto";
 	});
 	touch.on(wrap, 'swipeleft', function(ev){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
+		document.body.style.overflow="auto";
 	});
 }
 addLoadEvent(showMenu);

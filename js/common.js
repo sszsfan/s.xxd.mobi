@@ -133,11 +133,13 @@ jQuery(document).ready(function($){
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
 		$('.js_container').addClass('is_lock');
+		$('body').css('overflow','hidden');
 	});
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
+		$('body').css('overflow','auto');
 	});
 	
 	//压栈open－验证手机短信
