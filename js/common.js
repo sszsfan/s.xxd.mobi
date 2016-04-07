@@ -133,22 +133,24 @@ jQuery(document).ready(function($){
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
 		$('.js_container').addClass('is_lock');
-		$('#js_container').bind("touchmove",function(event){
+		/*$('#js_container').bind("touchmove",function(event){
+			event.preventDefault();
+			event.stopPropagation();
+		});*/
+		$('#js_main').css({overflow:"hidden",height:"10px"});
+		$('#js_main_out').bind("touchmove",function(event){
 			event.preventDefault();
 			event.stopPropagation();
 		});
-		$('#bd').bind("touchmove",function(event){
-			event.preventDefault();
-			event.stopPropagation();
-			stopScroll();
-		});
+		
 	});
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
-		$('#js_container').unbind("touchmove");
-		$('#bd').unbind("touchmove");
+		$('#js_main').css({overflow:"auto",height:"100%"});
+		$('#js_main_out').unbind("touchmove");
+		//$('#bd').unbind("touchmove");
 	});
 	
 	//压栈open－验证手机短信
@@ -173,8 +175,27 @@ function stopScroll(){
 	 initTop = scrollTop;
 	});	
 }
-
-
+/*
+	$("#js_main").touchmove= function(){
+		if($("#js_main").innerHeight() + $("#js_main").scrollTop() >= obj.scrollHeight) {
+        console.log('bottom');
+        if(delta < 0) {
+           console.log('to bottom!!');
+           e.preventDefault();
+           return false;
+        }
+    }
+    if($("#js_main").scrollTop() === 0) {
+        console.log('top');
+        
+        if(delta > 0) {
+           console.log('to top!!');
+           e.preventDefault();
+           return false;
+        }
+    }
+	};
+*/
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
 		if (event.targetTouches.length == 1) {
