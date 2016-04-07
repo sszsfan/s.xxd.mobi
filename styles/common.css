@@ -56,9 +56,14 @@ body.bg_white {background: #fff;}
 .loadingmore {text-align: center;height:20px;line-height: 20px;padding:10px 0;display: block;}
 .loadingmore img {width:20px;height: 20px;}
 .text_center {text-align: center;}
+.text_title {font-size: 22px;color: #000;}
 .container {margin: 0;padding: 0;}
 .gegege{color: #999;margin: 0 1px;}
 .bd {padding: 15px;}
+.p30_0 {padding: 30px 0;}
+
+.container.is_lock {overflow: hidden;visibility: hidden;}
+
 
 /*新增*/
 .show{display:block;}
@@ -659,7 +664,7 @@ word-break:break-all;color: #000;text-align: right;}
 /* 压栈显示 开始 */
 /* 压栈显示 开始 */
 
-.show_page {display: none;}
+.show_page {display: none;position: relative;}
 .show_page.is_show {display: block;}
 .show_page .show_page_transition {
     display: block;
