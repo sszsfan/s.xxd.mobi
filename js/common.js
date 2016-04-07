@@ -128,7 +128,7 @@ jQuery(document).ready(function($){
 		$('#js_show_page').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
 	});
-	
+/*	
 	//压栈open－收支明细详情
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
@@ -136,20 +136,23 @@ jQuery(document).ready(function($){
 		/*$('#js_container').bind("touchmove",function(event){
 			event.preventDefault();
 			event.stopPropagation();
-		});*/
-		
-		stoppull();
+		});
+		$('#js_main').css({overflow:"hidden",height:"10px"});
+		$('#js_main_out').bind("touchmove",function(event){
+			event.preventDefault();
+			event.stopPropagation();
+		});
 		
 	});
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
-		
-
+		$('#js_main').css({overflow:"auto",height:"100%"});
+		$('#js_main_out').unbind("touchmove");
 		//$('#bd').unbind("touchmove");
 	});
-	
+*/	
 	//压栈open－验证手机短信
 	$('.js_open_checksms').on('click', function(event){
 		$('#js_show_checksms').addClass('is_show');
@@ -160,7 +163,18 @@ jQuery(document).ready(function($){
 		$('#js_show_checksms').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
 	});
-
+function stopScroll(){
+	var initTop = 0;
+	$(window).scroll(function(){
+	 var scrollTop = $(document).scrollTop();
+	 if(scrollTop > initTop){
+	  $("body").scrollTop(0);
+	 } else {
+	  $("body").scrollTop(0);
+	 }
+	 initTop = scrollTop;
+	});	
+}
 /*
 	$("#js_main").touchmove= function(){
 		if($("#js_main").innerHeight() + $("#js_main").scrollTop() >= obj.scrollHeight) {
@@ -181,40 +195,39 @@ jQuery(document).ready(function($){
         }
     }
 	};
-*/
-function stoppull(){
-	var overscroll = function(el) {
-	  el.bind('touchstart', function() {
-	    var top = el.scrollTop
-	      , totalScroll = el.scrollHeight
-	      , currentScroll = top + el.offsetHeight;
-	    //If we're at the top or the bottom of the containers
-	    //scroll, push up or down one pixel.
-	    //
-	    //this prevents the scroll from "passing through" to
-	    //the body.
-	    if(top === 0) {
-	      el.scrollTop = 1;
-	    } else if(currentScroll === totalScroll) {
-	      el.scrollTop = top - 1;
-	    }
-	  });
-	  el.bind('touchmove', function(evt) {
-	    //if the content is actually scrollable, i.e. the content is long enough
-	    //that scrolling can occur
-	    if(el.offsetHeight < el.scrollHeight)
-	      evt._isScroller = true;
-	  });
-	}
-	overscroll($('#js_main_out'));
-	$("#bd").bind('touchmove', function(evt) {
-	  //In this case, the default behavior is scrolling the body, which
-	  //would result in an overflow.  Since we don't want that, we preventDefault.
-	  if(!evt._isScroller) {
-	    evt.preventDefault();
-	  }
-	});	
+
+var overscroll = function(el) {
+  el.bind('touchstart', function() {
+    var top = el.scrollTop
+      , totalScroll = el.scrollHeight
+      , currentScroll = top + el.offsetHeight;
+    //If we're at the top or the bottom of the containers
+    //scroll, push up or down one pixel.
+    //
+    //this prevents the scroll from "passing through" to
+    //the body.
+    if(top === 0) {
+      el.scrollTop = 1;
+    } else if(currentScroll === totalScroll) {
+      el.scrollTop = top - 1;
+    }
+  });
+  el.bind('touchmove', function(evt) {
+    //if the content is actually scrollable, i.e. the content is long enough
+    //that scrolling can occur
+    if(el.offsetHeight < el.scrollHeight)
+      evt._isScroller = true;
+  });
 }
+overscroll($('#js_main_out'));
+document.body.bind('touchmove', function(evt) {
+  //In this case, the default behavior is scrolling the body, which
+  //would result in an overflow.  Since we don't want that, we preventDefault.
+  if(!evt._isScroller) {
+    evt.preventDefault();
+  }
+});
+*/
 
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
