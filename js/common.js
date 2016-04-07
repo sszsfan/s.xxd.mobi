@@ -133,23 +133,22 @@ jQuery(document).ready(function($){
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
 		$('.js_container').addClass('is_lock');
-		$(document.body).css({
-			"overflow-x":"hidden",
-			"overflow-y":"hidden"
-		});
 		$('#js_container').bind("touchmove",function(event){
 			event.preventDefault();
+			event.stopPropagation();
+		});
+		$('#bd').bind("touchmove",function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			stopScroll();
 		});
 	});
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
-		$(document.body).css({
-			"overflow-x":"auto",
-			"overflow-y":"auto"
-		});
 		$('#js_container').unbind("touchmove");
+		$('#bd').unbind("touchmove");
 	});
 	
 	//压栈open－验证手机短信
@@ -162,6 +161,19 @@ jQuery(document).ready(function($){
 		$('#js_show_checksms').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
 	});
+function stopScroll(){
+	var initTop = 0;
+	$(window).scroll(function(){
+	 var scrollTop = $(document).scrollTop();
+	 if(scrollTop > initTop){
+	  $("body").scrollTop(0);
+	 } else {
+	  $("body").scrollTop(0);
+	 }
+	 initTop = scrollTop;
+	});	
+}
+
 
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
