@@ -46,7 +46,7 @@ function showMenu (){
 	//var dwidth = -0.8*(document.body.scrollWidth);
 	btn.onclick = function(){
 		wrap.setAttribute("class","show_menubox_transition2");
-		box.setAttribute("class","show_menubox_content show_menubox_content2"); 
+		box.setAttribute("class","show_menubox_content2"); 
 		//moveElement("js_show_menubox",0,10);
 		if(document.addEventListener){
 			document.addEventListener("touchmove",fun,false);
@@ -57,7 +57,7 @@ function showMenu (){
 	};
 	wrap.onclick = function(){
 		wrap.setAttribute("class","show_menubox_transition1");
-		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		box.setAttribute("class","show_menubox_content1"); 
 		//moveElement("js_show_menubox",dwidth,10);
 		if(document.removeEventListener){
 			document.removeEventListener("touchmove",fun,false);
@@ -72,7 +72,7 @@ function showMenu (){
 	}
 	touch.on(box, 'swipeleft', function(ev){
 		wrap.setAttribute("class","show_menubox_transition1");
-		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		box.setAttribute("class","show_menubox_content1"); 
 		//moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
 		document.removeEventListener("touchmove",fun,false);
@@ -80,7 +80,7 @@ function showMenu (){
 	});
 	touch.on(wrap, 'swipeleft', function(ev){
 		wrap.setAttribute("class","show_menubox_transition1");
-		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		box.setAttribute("class","show_menubox_content1"); 
 		//moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
 		document.removeEventListener("touchmove",fun,false);
