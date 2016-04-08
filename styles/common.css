@@ -694,8 +694,7 @@ word-break:break-all;color: #000;text-align: right;}
     transition: transform .3s, -webkit-transform .3s;
     transform: translate(0, 0); 
 }
-.show_page .show_page_body .main {position: absolute;left: 0;top:0;right: 0;bottom:0;overflow-y: auto;}
-
+.show_page .show_page_body .main {position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0;}
 
 
 
