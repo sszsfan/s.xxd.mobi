@@ -69,6 +69,20 @@ function showMenu (){
 			e.preventDefault();
    	  e.stopPropagation();
 	}
+	touch.on(box, 'swipeleft', function(ev){
+		wrap.style.display="none";
+		moveElement("js_show_menubox",dwidth,10);
+		document.body.style.overflow = "auto";
+		document.removeEventListener("touchmove",fun,false);
+		bd.removeEventListener("DOMMouseScroll",fun,false);
+	});
+	touch.on(wrap, 'swipeleft', function(ev){
+		wrap.style.display="none";
+		moveElement("js_show_menubox",dwidth,10);
+		document.body.style.overflow = "auto";
+		document.removeEventListener("touchmove",fun,false);
+		bd.removeEventListener("DOMMouseScroll",fun,false);
+	});
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
 		if (event.targetTouches.length == 1) {
@@ -80,6 +94,7 @@ function showMenu (){
 	}, false);  */ 
 }
 
+/*
 function touchMove(){
 	var wrap = document.getElementById("js_show_menuwrap");
 	var dwidth = -0.8*(document.body.scrollWidth);
@@ -95,7 +110,7 @@ function touchMove(){
 		document.body.style.overflow = "auto";
 	});
 }
-/*
+
 function stopScroll(){
 	if(!document.getElementById("js_show_inoutdetail")) return false;
 	if(!document.getElementsByClassName("js_open_inoutdetail")) return false;
