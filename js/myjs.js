@@ -39,47 +39,52 @@ function moveElement(elementID,final_x,interval) {
 }
 
 function showMenu (){
-	var btn = document.getElementById("js_open_menubox");
-	var wrap = document.getElementById("js_show_menuwrap");
-	var box = document.getElementById("js_show_menubox");
-	var bd = document.getElementById("bd");
-	var dwidth = -0.8*(document.body.scrollWidth);
+	var btn = document.getElementById("js_open_menubox");  //按钮
+	var wrap = document.getElementById("js_show_menuwrap"); //覆盖层
+	var box = document.getElementById("js_show_menubox");  //弹出层
+	//var bd = document.getElementById("bd");
+	//var dwidth = -0.8*(document.body.scrollWidth);
 	btn.onclick = function(){
-		wrap.style.display="block";
-		box.style.display="block";
-		moveElement("js_show_menubox",0,10);
+		wrap.setAttribute("class","show_menubox_transition2");
+		box.setAttribute("class","show_menubox_content show_menubox_content2"); 
+		//moveElement("js_show_menubox",0,10);
 		if(document.addEventListener){
-			document.addEventListener("touchmove",fun2,false);
-			bd.addEventListener("DOMMouseScroll",fun2,false);
+			document.addEventListener("touchmove",fun,false);
+			//bd.addEventListener("DOMMouseScroll",fun,false);
 		}else{
 			alert("failed addEventListener");
 		}
 	};
 	wrap.onclick = function(){
-		wrap.style.display="none";
-		moveElement("js_show_menubox",dwidth,10);
+		wrap.setAttribute("class","show_menubox_transition1");
+		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		//moveElement("js_show_menubox",dwidth,10);
 		if(document.removeEventListener){
-			document.removeEventListener("touchmove",fun2,false);
-			bd.removeEventListener("DOMMouseScroll",fun2,false);
+			document.removeEventListener("touchmove",fun,false);
+			//bd.removeEventListener("DOMMouseScroll",fun,false);
 		}else{
 			alert("failed removeEventListener");
 		}
 	};
-	function fun2(e){
-			e.preventDefault();
-   	  e.stopPropagation();
+	function fun(e){
+		e.preventDefault();
+   	    e.stopPropagation();
 	}
 	touch.on(box, 'swipeleft', function(ev){
-		wrap.style.display="none";
-		moveElement("js_show_menubox",dwidth,10);
+		wrap.setAttribute("class","show_menubox_transition1");
+		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		//moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
-		document.body.removeEventListener("touchmove",fun2,false);
+		document.removeEventListener("touchmove",fun,false);
+		//bd.removeEventListener("DOMMouseScroll",fun,false);
 	});
 	touch.on(wrap, 'swipeleft', function(ev){
-		wrap.style.display="none";
-		moveElement("js_show_menubox",dwidth,10);
+		wrap.setAttribute("class","show_menubox_transition1");
+		box.setAttribute("class","show_menubox_content show_menubox_content1"); 
+		//moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
-		document.body.removeEventListener("touchmove",fun2,false);
+		document.removeEventListener("touchmove",fun,false);
+		//bd.removeEventListener("DOMMouseScroll",fun,false);
 	});
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
@@ -224,5 +229,4 @@ function stopScroll(){
 
 
 addLoadEvent(showMenu);
-addLoadEvent(touchMove);
 addLoadEvent(stopScroll);
