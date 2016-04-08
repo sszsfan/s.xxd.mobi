@@ -49,8 +49,8 @@ function showMenu (){
 		box.style.display="block";
 		moveElement("js_show_menubox",0,10);
 		if(document.addEventListener){
-			document.addEventListener("touchmove",fun,false);
-			bd.addEventListener("DOMMouseScroll",fun,false);
+			document.addEventListener("touchmove",fun2,false);
+			bd.addEventListener("DOMMouseScroll",fun2,false);
 		}else{
 			alert("failed addEventListener");
 		}
@@ -59,13 +59,13 @@ function showMenu (){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
 		if(document.removeEventListener){
-			document.removeEventListener("touchmove",fun,false);
-			bd.removeEventListener("DOMMouseScroll",fun,false);
+			document.removeEventListener("touchmove",fun2,false);
+			bd.removeEventListener("DOMMouseScroll",fun2,false);
 		}else{
 			alert("failed removeEventListener");
 		}
 	};
-	function fun(e){
+	function fun2(e){
 			e.preventDefault();
    	  e.stopPropagation();
 	}
@@ -73,15 +73,13 @@ function showMenu (){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
-		document.removeEventListener("touchmove",fun,false);
-		bd.removeEventListener("DOMMouseScroll",fun,false);
+		document.body.removeEventListener("touchmove",fun2,false);
 	});
 	touch.on(wrap, 'swipeleft', function(ev){
 		wrap.style.display="none";
 		moveElement("js_show_menubox",dwidth,10);
 		document.body.style.overflow = "auto";
-		document.removeEventListener("touchmove",fun,false);
-		bd.removeEventListener("DOMMouseScroll",fun,false);
+		document.body.removeEventListener("touchmove",fun2,false);
 	});
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
