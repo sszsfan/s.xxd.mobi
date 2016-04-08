@@ -10,13 +10,13 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-dns-prefetch-control" content="on">
 	<title>王大五</title>
-	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
+<!--	<link href="styles/weui.min.css" rel="stylesheet" type="text/css"> -->
 	<link href="styles/common.css" rel="stylesheet" type="text/css">
 
 </head>
 <body id="bd">
+<div class="scroll" style="position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0">
 	<div class="container js_container" id="js_container">
-		
 		<div class="top_toolbar">
 			<div class="open_menubox" id="js_open_menubox">
 				<a href="javascript:void(0);">菜单</a>
@@ -28,7 +28,7 @@
 			<!-- //top_toolbar_content -->
 		</div><!-- //top_toolbar -->
 		
-		<div class="main" id="js_main2">
+		<div class="main" id="js_main1">
 			<div class="xxd_cell_box js_cell_box" id="js_main">
 				<div class="xxd_cell_item">
 					<a href="javascript:void(0);" class="js_open_inoutdetail">
@@ -126,8 +126,7 @@
 				<div class="data_none">无数据</div>
 				<div class="loadingbox"><img src="images/loading.gif"></div>
 			</div>
-			<!-- //batch_list_box -->
-			
+			<!-- //batch_list_box -->	
 		</div>
 		<!-- //main -->
 	
@@ -178,7 +177,7 @@
 	<!-- //压栈显示 开始 -->
 	<div class="show_page" id="js_show_inoutdetail"> 
 		<div class="show_page_transition"></div>  
-		<div class="show_page_body" >
+		<div class="show_page_body" id="js_main2">
 			<div class="top_toolbar">
 				<div class="close_show_page" id="js_close_show_page">
 					<a href="javascript:void(0);">关闭</a>
@@ -190,8 +189,8 @@
 				<!-- //top_toolbar_content -->
 			</div>
 			<!-- //top_toolbar -->
-			<div class="main" id="js_main1">
-				<div class="cell_detail_box" id="js_main_out">
+			<div class="main" >
+				<div class="cell_detail_box">
 					<div class="cell_detail_head">
 						<div class="title">出账金额</div>
 						<div class="value"><span class="color_red">- 228.00</span></div>
@@ -352,13 +351,13 @@
 		<!-- //show_page_body -->	
 	</div>
 	<!-- //压栈显示 结束 -->
-	
+</div>	
 	
 	<!-- start javascript -->
 	<script type="text/javascript" src="js/touch.js"></script>
-	<script type="text/javascript" src="js/myjs.js"></script>
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/common.js"></script>
-	<!-- end javascript -->
+	<script type="text/javascript" src="js/myjs.js"></script> 
+	<script src="js/jquery-1.11.3.min.js"></script> 
+	<!-- <script src="js/common.js"></script>
+	 end javascript -->
 </body>
 </html>

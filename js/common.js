@@ -128,17 +128,17 @@ jQuery(document).ready(function($){
 		$('#js_show_page').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
 	});
-/*	
+/*
 	//压栈open－收支明细详情
 	$('.js_open_inoutdetail').on('click', function(event){
 		$('#js_show_inoutdetail').addClass('is_show');
 		$('.js_container').addClass('is_lock');
-		/*$('#js_container').bind("touchmove",function(event){
+		$('#js_container').bind("touchmove",function(event){
 			event.preventDefault();
 			event.stopPropagation();
 		});
-		$('#js_main').css({overflow:"hidden",height:"10px"});
-		$('#js_main_out').bind("touchmove",function(event){
+		$('#js_main1').css({overflow:"hidden",height:"10px"});
+		$('#js_main2').bind("touchmove",function(event){
 			event.preventDefault();
 			event.stopPropagation();
 		});
@@ -148,8 +148,8 @@ jQuery(document).ready(function($){
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
-		$('#js_main').css({overflow:"auto",height:"100%"});
-		$('#js_main_out').unbind("touchmove");
+		$('#js_main1').css({overflow:"auto",height:"100%"});
+		$('#js_main2').unbind("touchmove");
 		//$('#bd').unbind("touchmove");
 	});
 */	
