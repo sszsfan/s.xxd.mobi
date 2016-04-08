@@ -15,7 +15,6 @@
 
 </head>
 <body id="bd">
-<div class="scroll" style="position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0">
 	<div class="container js_container" id="js_container">
 		<div class="top_toolbar">
 			<div class="open_menubox" id="js_open_menubox">
@@ -177,7 +176,7 @@
 	<!-- //压栈显示 开始 -->
 	<div class="show_page" id="js_show_inoutdetail"> 
 		<div class="show_page_transition"></div>  
-		<div class="show_page_body" id="js_main2">
+		<div class="show_page_body">
 			<div class="top_toolbar">
 				<div class="close_show_page" id="js_close_show_page">
 					<a href="javascript:void(0);">关闭</a>
@@ -189,7 +188,7 @@
 				<!-- //top_toolbar_content -->
 			</div>
 			<!-- //top_toolbar -->
-			<div class="main" >
+			<div class="main" id="js_main2">
 				<div class="cell_detail_box">
 					<div class="cell_detail_head">
 						<div class="title">出账金额</div>
@@ -350,8 +349,7 @@
 		</div>
 		<!-- //show_page_body -->	
 	</div>
-	<!-- //压栈显示 结束 -->
-</div>	
+	<!-- //压栈显示 结束 -->	
 	
 	<!-- start javascript -->
 	<script type="text/javascript" src="js/touch.js"></script>
