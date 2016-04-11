@@ -117,17 +117,6 @@ jQuery(document).ready(function($){
 		$('.js_show_success').removeClass('is_show');
 	});
 	
-
-	//压栈open
-	$('#js_open_show_page').on('click', function(event){
-		$('#js_show_page').addClass('is_show');
-		$('.js_container').addClass('is_lock');
-	});
-	//压栈close
-	$('#js_close_show_page').on('click', function(event){
-		$('#js_show_page').removeClass('is_show');
-		$('.js_container').removeClass('is_lock');
-	});
 /*
 	//压栈open－收支明细详情
 	$('.js_open_inoutdetail').on('click', function(event){
@@ -137,97 +126,178 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 			event.stopPropagation();
 		});
-		$('#js_main1').css({overflow:"hidden",height:"10px"});
-		$('#js_main2').bind("touchmove",function(event){
-			event.preventDefault();
-			event.stopPropagation();
-		});
 		
 	});
+
 	//压栈close－收支明细详情
 	$('#js_close_show_page').on('click', function(event){
 		$('#js_show_inoutdetail').removeClass('is_show');
 		$('.js_container').removeClass('is_lock');
-		$('#js_main1').css({overflow:"auto",height:"100%"});
+
 		$('#js_main2').unbind("touchmove");
 		//$('#bd').unbind("touchmove");
 	});
 */	
-	//压栈open－验证手机短信
-	$('.js_open_checksms').on('click', function(event){
-		$('#js_show_checksms').addClass('is_show');
-		$('.js_container').addClass('is_lock');
-	});
-	//压栈close－验证手机短信
-	$('#js_close_show_page').on('click', function(event){
-		$('#js_show_checksms').removeClass('is_show');
-		$('.js_container').removeClass('is_lock');
-	});
-function stopScroll(){
-	var initTop = 0;
-	$(window).scroll(function(){
-	 var scrollTop = $(document).scrollTop();
-	 if(scrollTop > initTop){
-	  $("body").scrollTop(0);
-	 } else {
-	  $("body").scrollTop(0);
-	 }
-	 initTop = scrollTop;
-	});	
-}
-/*
-	$("#js_main").touchmove= function(){
-		if($("#js_main").innerHeight() + $("#js_main").scrollTop() >= obj.scrollHeight) {
-        console.log('bottom');
-        if(delta < 0) {
-           console.log('to bottom!!');
-           e.preventDefault();
-           return false;
-        }
-    }
-    if($("#js_main").scrollTop() === 0) {
-        console.log('top');
-        
-        if(delta > 0) {
-           console.log('to top!!');
-           e.preventDefault();
-           return false;
-        }
-    }
-	};
+	function stopScroll3(){
+		var overscroll = function(el) {
+		  el.addEventListener('touchstart', function() {
+		    var top = el.scrollTop
+		      , totalScroll = el.scrollHeight
+		      , currentScroll = top + el.offsetHeight
+		    if(top === 0) {
+		      el.scrollTop = 1
+		    } else if(currentScroll === totalScroll) {
+		      el.scrollTop = top - 1
+		    }
+		  })
+		  el.addEventListener('touchmove', function(evt) {
+		    if(el.offsetHeight < el.scrollHeight)
+		      evt._isScroller = true;
+		  })
+		}
+		var fun = function(evt) {
+		  if(!evt._isScroller) {
+		    evt.preventDefault();
+		   }
+		};
+		var aa=$('.scroll')[0];
+		overscroll(aa);
+		$('body').bind('touchmove', fun);
+	  $('body').unbind('touchmove', fun);
 
-var overscroll = function(el) {
-  el.bind('touchstart', function() {
-    var top = el.scrollTop
-      , totalScroll = el.scrollHeight
-      , currentScroll = top + el.offsetHeight;
-    //If we're at the top or the bottom of the containers
-    //scroll, push up or down one pixel.
-    //
-    //this prevents the scroll from "passing through" to
-    //the body.
-    if(top === 0) {
-      el.scrollTop = 1;
-    } else if(currentScroll === totalScroll) {
-      el.scrollTop = top - 1;
-    }
-  });
-  el.bind('touchmove', function(evt) {
-    //if the content is actually scrollable, i.e. the content is long enough
-    //that scrolling can occur
-    if(el.offsetHeight < el.scrollHeight)
-      evt._isScroller = true;
-  });
-}
-overscroll($('#js_main_out'));
-document.body.bind('touchmove', function(evt) {
-  //In this case, the default behavior is scrolling the body, which
-  //would result in an overflow.  Since we don't want that, we preventDefault.
-  if(!evt._isScroller) {
-    evt.preventDefault();
-  }
-});
-*/
+		//压栈open－验证手机短信
+		$('.js_open_checksms').on('click', function(event){
+			$('#js_show_checksms').addClass('is_show');
+			$('.js_container').addClass('is_lock');
+		});
+		
+		//压栈close－验证手机短信
+		$('#js_close_show_page').on('click', function(event){
+			$('#js_show_checksms').removeClass('is_show');
+			$('.js_container').removeClass('is_lock');
+		});
+	} 
+	stopScroll3();
+	
+	function stopScroll2(){
+		var overscroll = function(el) {
+		  el.addEventListener('touchstart', function() {
+		    var top = el.scrollTop
+		      , totalScroll = el.scrollHeight
+		      , currentScroll = top + el.offsetHeight
+		    if(top === 0) {
+		      el.scrollTop = 1
+		    } else if(currentScroll === totalScroll) {
+		      el.scrollTop = top - 1
+		    }
+		  })
+		  el.addEventListener('touchmove', function(evt) {
+		    if(el.offsetHeight < el.scrollHeight)
+		      evt._isScroller = true;
+		  })
+		}
+		var fun = function(evt) {
+		  if(!evt._isScroller) {
+		    evt.preventDefault();
+		   }
+		};
+		var aa=$('.scroll')[0];
+		overscroll(aa);
+		$('body').bind('touchmove', fun);
+	  $('body').unbind('touchmove', fun);
+		//压栈open
+		$('#js_open_show_page').on('click', function(event){
+			$('#js_show_page').addClass('is_show');
+			$('.js_container').addClass('is_lock');
+		});
+		//压栈close
+		$('#js_close_show_page').on('click', function(event){
+			$('#js_show_page').removeClass('is_show');
+			$('.js_container').removeClass('is_lock');
+		});
+/*  	
+	  //压栈open——修改姓名、手机号码、安全密码
+	  $('.js_change_btn').each(function(index){
+	    $(this).click(function(){
+	      $("#js_main_info").removeClass("is_hidden").addClass("is_show");
+	      $("#js_main_info > .js_change_info:eq("+index+")").removeClass("hidden").addClass("show");
+				if(parseInt($("#js_main_info > .js_change_info:eq("+index+")").height()) > parseInt($("body")[0].clientHeight)-50){
+					alert($("#js_main_info > .js_change_info:eq("+index+")").height());
+					alert($("body")[0].clientHeight);
+					//$('#js_main_info').unbind("touchmove");
+					$('#js_main_info').unbind("touchmove");
+
+				}else{
+					$('#js_main_info').bind("touchmove",function(event){
+						event.preventDefault();
+						event.stopPropagation();
+					});
+				}	
+
+	    });
+	  });
+	  //压栈close——修改姓名、手机号码、安全密码
+	  $('.js_close_btn').each(function(index){
+	  	$(this).click(function(){
+	      $("#js_main_info").removeClass("is_show").addClass("is_hidden");
+	      $("#js_main_info > .js_change_info:eq("+index+")").removeClass("show").addClass("hidden");
+	      $('#js_main_info').unbind("touchmove");
+	  	});
+	  });
+*/	  
+	}
+  stopScroll2();
+  
+
+	function stopScroll(){
+	  //压栈open——修改姓名、手机号码、安全密码
+	  $('.js_change_btn').each(function(index){
+	    $(this).click(function(){
+	      $("#js_main_info").removeClass("is_hidden").addClass("is_show");
+	      $("#js_main_info > .js_change_info:eq("+index+")").removeClass("hidden").addClass("show");
+      	$('#js_main_info').bind("touchmove",function(event){
+					event.preventDefault();
+					event.stopPropagation();
+				});
+	      if(parseInt($("#js_main_info > .js_change_info:eq("+index+")").height()) > parseInt($("body")[0].clientHeight)-50){
+					var overscroll = function(el) {
+					  el.addEventListener('touchstart', function() {
+					    var top = el.scrollTop
+					      , totalScroll = el.scrollHeight
+					      , currentScroll = top + el.offsetHeight
+					    if(top === 0) {
+					      el.scrollTop = 1
+					    } else if(currentScroll === totalScroll) {
+					      el.scrollTop = top - 1
+					    }
+					  })
+					  el.addEventListener('touchmove', function(evt) {
+					    if(el.offsetHeight < el.scrollHeight)
+					      evt._isScroller = true;
+					  })
+					}
+					var fun = function(evt) {
+					  if(!evt._isScroller) {
+					    evt.preventDefault();
+					   }
+					};
+					var aa=$('.main2')[0];
+			    overscroll(aa);
+			    $('#js_main_info').unbind("touchmove");
+					$('body').bind('touchmove', fun);
+			  	$('body').unbind('touchmove', fun);
+				}
+	    });
+	  });
+	  //压栈close——修改姓名、手机号码、安全密码
+	  $('.js_close_btn').each(function(index){
+	  	$(this).click(function(){
+	      $("#js_main_info").removeClass("is_show").addClass("is_hidden");
+	      $("#js_main_info > .js_change_info:eq("+index+")").removeClass("show").addClass("hidden");
+	  	});
+	  });
+	}
+  stopScroll();
 
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话

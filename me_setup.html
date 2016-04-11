@@ -13,7 +13,7 @@
 	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
 	<link href="styles/common.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body style="overflow-y:scroll; -webkit-overflow-scrolling: touch; position:absolute; top:0; left:0; bottom:0; right:0;">
 	<div class="top_toolbar">
 		<div class="open_menubox" id="js_open_menubox">
 			<a href="javascript:void(0);">菜单</a>
@@ -25,82 +25,108 @@
 		<!-- //top_toolbar_content -->
 	</div><!-- //top_toolbar -->
 	
-	<div class="main">
-		
-        <div class="weui_cells">
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>头像</p>
-                </div>
-                <div class="weui_cell_ft">
-	                <div class="imgbox">
+	<div class="main" style="overflow-y:scroll; -webkit-overflow-scrolling: touch; ">
+    <div class="weui_cells">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>头像</p>
+        </div>
+        <div class="weui_cell_ft">
+          <div class="imgbox">
 						<img src="images/avatar_user.png" class="img60" />
 					</div>
-                </div>
-            </div>
         </div>
-		
-		
+      </div>
+    </div>	
 		<div class="weui_cells weui_cells_access">
-            <a class="weui_cell" href="javascript:void(0);">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>姓名</p>
-                </div>
-                <div class="weui_cell_ft">王大五</div>
-            </a>
-            <a class="weui_cell" href="javascript:void(0);">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>手机号码</p>
-                </div>
-                <div class="weui_cell_ft">13678789898</div>
-            </a>
-        </div>	
-        
-        <div class="weui_cells">
+      <a class="weui_cell js_change_btn" href="javascript:void(0);">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>姓名</p>
+          </div>
+          <div class="weui_cell_ft">王大五</div>
+      </a>
+      <a class="weui_cell js_change_btn" href="javascript:void(0);">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>手机号码</p>
+          </div>
+          <div class="weui_cell_ft">13678789898</div>
+      </a>
+      <a class="weui_cell js_change_btn" href="javascript:void(0);">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>安全密码</p>
+          </div>
+          <div class="weui_cell_ft">********</div>
+      </a>
+    </div>	        
+    <div class="weui_cells">
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>取件提成</p>
+          </div>
+          <div class="weui_cell_ft">5%</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>送件提成</p>
+          </div>
+          <div class="weui_cell_ft">8%</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉提成</p>
+          </div>
+          <div class="weui_cell_ft">1元/粉丝</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉提成考验期</p>
+          </div>
+          <div class="weui_cell_ft">30天</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉分润</p>
+          </div>
+          <div class="weui_cell_ft">5%</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉分润时效</p>
+          </div>
+          <div class="weui_cell_ft">12个月</div>
+      </div>
+
+
             <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>取件提成</p>
-                </div>
-                <div class="weui_cell_ft">5%</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>送件提成</p>
-                </div>
-                <div class="weui_cell_ft">8%</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>加粉提成</p>
-                </div>
-                <div class="weui_cell_ft">1元/粉丝</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>加粉提成考验期</p>
-                </div>
-                <div class="weui_cell_ft">30天</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>加粉分润</p>
-                </div>
-                <div class="weui_cell_ft">5%</div>
-            </div>
-            <div class="weui_cell">
-                <div class="weui_cell_bd weui_cell_primary">
-                    <p>加粉分润时效</p>
-                </div>
-                <div class="weui_cell_ft">12个月</div>
-            </div>
-        </div>
-        
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉提成</p>
+          </div>
+          <div class="weui_cell_ft">1元/粉丝</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉提成考验期</p>
+          </div>
+          <div class="weui_cell_ft">30天</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉分润</p>
+          </div>
+          <div class="weui_cell_ft">5%</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>加粉分润时效</p>
+          </div>
+          <div class="weui_cell_ft">12个月</div>
+      </div>
+    </div> 
 	</div>
 	<!-- //main -->
 	
 	<!-- //显示菜单 开始 -->
 	<div class="show_menubox_transition1" id="js_show_menuwrap"></div>  
-
 	<div class="show_menubox_content1" id="js_show_menubox">
 		<div class="show_userinfo">
 			<div class="user_avatar">
@@ -112,25 +138,25 @@
 			</div>
 		</div>
 		<!-- //show_userinfo -->
-	    <div class="show_menu">
+    <div class="show_menu">
 			<div class="xxd_cells">
-	            <a class="xxd_cell" href="index.html">
-		            <div class="xxd_cell_icon"></div>
-	                <div class="xxd_cell_bd">
-	                    <p>管理中心</p>
-	                </div>
-	            </a>
-	            <a class="xxd_cell" href="me.html">
-	                <div class="xxd_cell_bd">
-	                    <p>我的收成</p>
-	                </div>
-	            </a>
-	            <a class="xxd_cell" href="me_qrcode.html">
-	                <div class="xxd_cell_bd">
-	                    <p>我的推广码</p>
-	                </div>
-	            </a>
-	        </div>
+	      <a class="xxd_cell" href="index.html">
+	        <div class="xxd_cell_icon"></div>
+	          <div class="xxd_cell_bd">
+	              <p>管理中心</p>
+	          </div>
+	      </a>
+	      <a class="xxd_cell" href="me.html">
+	          <div class="xxd_cell_bd">
+	              <p>我的收成</p>
+	          </div>
+	      </a>
+	      <a class="xxd_cell" href="me_qrcode.html">
+	          <div class="xxd_cell_bd">
+	              <p>我的推广码</p>
+	          </div>
+	      </a>
+	    </div>
 		</div>
 		<!-- //show_menu -->
 	</div>
@@ -138,6 +164,150 @@
 
 	<!-- //显示菜单 结束 -->
 	
+	<!-- 压栈显示 更改姓名、手机号码、安全密码 -->
+	<div class="main2 is_hidden" id="js_main_info">
+		<div class="js_change_info hidden">
+		  <div class="weui_cells_title">请输入姓名</div>
+		  <div class="weui_cells weui_cells_form">
+	      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="请输入姓名">
+          </div>
+	      </div>
+		  </div>
+	    <div class="bd">
+	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
+	    </div>
+	  </div> 
+
+	  <div class="js_change_info hidden">
+		  <div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+			<div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>
+	    <div class="bd">
+	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
+	    </div>
+	  </div>  
+
+	  <div class="js_change_info hidden">
+		  <div class="weui_cells_title">请输入安全密码</div>
+		  <div class="weui_cells weui_cells_form">
+	      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="请输入安全密码">
+          </div>
+	      </div>
+		  </div>
+		  <div class="weui_cells_title">请再次输入安全密码</div>
+		  <div class="weui_cells weui_cells_form">		  
+  		  <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="请输入安全密码">
+          </div>
+	      </div>
+  		</div>  
+	    <div class="bd">
+	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
+	    </div>
+	  </div>   
+  </div>
+
 	<!-- start javascript -->
 	<script type="text/javascript" src="js/touch.js"></script>
 	<script type="text/javascript" src="js/myjs.js"></script>

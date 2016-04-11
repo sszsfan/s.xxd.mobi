@@ -14,6 +14,7 @@
 	<link href="styles/common.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div class="scroll" style="position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0;">
 	<div class="top_toolbar">
 		<div class="open_menubox" id="js_open_menubox">
 			<a href="javascript:void(0);">菜单</a>
@@ -43,7 +44,7 @@
 			<div class="money">8475859.00</div>
 			<div class="desc">日总收成</div>
 		</div><!-- //show_moneybox -->
-		
+		<div style="height:500px;width:300px;display:block;background-color: red;"></div>
 		<div class="xxd_navbar">
             <div class="xxd_navbar_item xxd_bar_item_on">
                 <div class="money">34342.50</div>
@@ -120,7 +121,7 @@
 	
 	
 	<!-- //压栈显示 开始 -->
-	<div class="show_page" id="js_show_page"> 
+	<div class="show_page" id="js_show_page" > 
 		<div class="show_page_transition"></div>  
 		<div class="show_page_body" >
 			<div class="top_toolbar">
@@ -196,7 +197,7 @@
 		<!-- //show_page_body -->	
 	</div>
 	<!-- //压栈显示 结束 -->
-	
+</div>	
 	<!-- start javascript -->
 	<script type="text/javascript" src="js/touch.js"></script>
 	<script type="text/javascript" src="js/myjs.js"></script>
