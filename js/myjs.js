@@ -172,6 +172,7 @@ function stopScroll(){
 
 function stopScroll(){
 	if(!document.getElementById("js_show_inoutdetail")) return false;
+	if(!document.getElementById("js_main2")) return false;
 	if(!document.getElementsByClassName("js_open_inoutdetail")) return false;
 	var btns = document.getElementsByClassName("js_open_inoutdetail");
 	var wrap = document.getElementById("js_show_inoutdetail");

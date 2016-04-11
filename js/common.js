@@ -137,8 +137,9 @@ jQuery(document).ready(function($){
 		$('#js_main2').unbind("touchmove");
 		//$('#bd').unbind("touchmove");
 	});
-*/	
+*/
 	function stopScroll3(){
+		if(!document.getElementById("js_show_checksms")) return false;
 		var overscroll = function(el) {
 		  el.addEventListener('touchstart', function() {
 		    var top = el.scrollTop
@@ -178,9 +179,10 @@ jQuery(document).ready(function($){
 		});
 	} 
 	stopScroll3();
-	
+
 	function stopScroll2(){
-		var overscroll = function(el) {
+		if(!document.getElementById("js_show_page")) return false;
+		var overscroll2 = function(el) {
 		  el.addEventListener('touchstart', function() {
 		    var top = el.scrollTop
 		      , totalScroll = el.scrollHeight
@@ -202,7 +204,7 @@ jQuery(document).ready(function($){
 		   }
 		};
 		var aa=$('.scroll')[0];
-		overscroll(aa);
+		overscroll2(aa);
 		$('body').bind('touchmove', fun);
 	  $('body').unbind('touchmove', fun);
 		//压栈open
@@ -215,6 +217,8 @@ jQuery(document).ready(function($){
 			$('#js_show_page').removeClass('is_show');
 			$('.js_container').removeClass('is_lock');
 		});
+	}
+  stopScroll2();		
 /*  	
 	  //压栈open——修改姓名、手机号码、安全密码
 	  $('.js_change_btn').each(function(index){
@@ -245,8 +249,7 @@ jQuery(document).ready(function($){
 	  	});
 	  });
 */	  
-	}
-  stopScroll2();
+
   
 
 	function stopScroll(){
