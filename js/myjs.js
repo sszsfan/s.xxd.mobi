@@ -9,7 +9,7 @@ function addLoadEvent(func) {
     }
   }
 }
-
+/*
 function moveElement(elementID,final_x,interval) {
 	var dwidth = -0.8*(document.body.scrollWidth);
   if (!document.getElementById) return false;
@@ -37,7 +37,7 @@ function moveElement(elementID,final_x,interval) {
   var repeat = "moveElement('"+elementID+"',"+final_x+","+interval+")";
   elem.movement = setTimeout(repeat,interval);
 }
-
+*/
 function showMenu (){
 	var btn = document.getElementById("js_open_menubox");  //按钮
 	var wrap = document.getElementById("js_show_menuwrap"); //覆盖层
