@@ -299,6 +299,13 @@ jQuery(document).ready(function($){
 	      $("#js_main_info > .js_change_info:eq("+index+")").removeClass("show").addClass("hidden");
 	  	});
 	  });
+	  //压栈close2——修改姓名、手机号码、安全密码
+	  $('.js_close_show_page2').each(function(index){
+	  	$(this).click(function(){
+	  		$("#js_main_info").removeClass("is_show").addClass("is_hidden");
+	  		$("#js_main_info > .js_change_info:eq("+index+")").removeClass("show").addClass("hidden");
+	  	});
+	  });		
 	}
   stopScroll();
 
