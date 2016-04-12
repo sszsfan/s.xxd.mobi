@@ -13,7 +13,7 @@
 	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
 	<link href="styles/common.css" rel="stylesheet" type="text/css">
 </head>
-<body style="overflow-y:scroll; -webkit-overflow-scrolling: touch; position:absolute; top:0; left:0; bottom:0; right:0;">
+<body class="js_modal_open bd_scroll">
 	<div class="top_toolbar">
 		<div class="open_menubox" id="js_open_menubox">
 			<a href="javascript:void(0);">菜单</a>
@@ -25,7 +25,7 @@
 		<!-- //top_toolbar_content -->
 	</div><!-- //top_toolbar -->
 	
-	<div class="main" style="overflow-y:scroll; -webkit-overflow-scrolling: touch; ">
+	<div class="main">
     <div class="weui_cells">
       <div class="weui_cell">
         <div class="weui_cell_bd weui_cell_primary">
@@ -166,7 +166,41 @@
 	
 	<!-- 压栈显示 更改姓名、手机号码、安全密码 -->
 	<div class="main2 is_hidden" id="js_main_info">
+		<!-- //提示 开始 -->
+		<div class="modal js_modal_001">
+		  <div class="modal_dialog_tips showtips">
+		    <div class="modal_content">
+		    	<div class="mcs_img">
+		    		<div class="loadingbox" style="display:none;">
+						<img src="images/loading.gif">
+					</div>
+					<!-- //处理中 -->
+					<div class="successbox">
+						<span class="icon"></span>
+					</div>
+					<!-- //处理成功 -->
+					<div class="failurebox"  style="display:none;">
+						<span class="icon"></span>
+					</div>
+					<!-- //处理失败 -->
+		    	</div>
+		    	<div class="mcs_text">
+		    		已发送
+		    	</div>
+		    </div>
+		  </div>
+		  <div class="modal_cover"></div>
+		</div>
+		<!-- //提示 结束 --> 
 		<div class="js_change_info hidden">
+			<div class="top_toolbar2">
+				<div class="close_show_page js_close_show_page2">
+					<a href="javascript:void(0);">关闭</a>
+				</div>
+				<div class="top_toolbar_content">
+					姓名设置
+				</div>
+			</div>
 		  <div class="weui_cells_title">请输入姓名</div>
 		  <div class="weui_cells weui_cells_form">
 	      <div class="weui_cell">
@@ -181,6 +215,14 @@
 	  </div> 
 
 	  <div class="js_change_info hidden">
+			<div class="top_toolbar2">
+				<div class="close_show_page js_close_show_page2">
+					<a href="javascript:void(0);">关闭</a>
+				</div>
+				<div class="top_toolbar_content">
+					手机号码设置
+				</div>
+			</div>
 		  <div class="inputbox">
 				<div class="inputarea have_button border_line border_b">
 					<div class="iname">+86</div>
@@ -191,101 +233,21 @@
 					<div class="iname">验证码</div>
 					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
 				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
-			<div class="inputbox">
-				<div class="inputarea have_button border_line border_b">
-					<div class="iname">+86</div>
-					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
-					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
-				</div>
-				<div class="inputarea border_line border_b">
-					<div class="iname">验证码</div>
-					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
-				</div>
-			</div>
+			</div>	
 	    <div class="bd">
 	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
 	    </div>
 	  </div>  
 
 	  <div class="js_change_info hidden">
+			<div class="top_toolbar2">
+				<div class="close_show_page js_close_show_page2">
+					<a href="javascript:void(0);">关闭</a>
+				</div>
+				<div class="top_toolbar_content">
+					安全密码设置
+				</div>
+			</div>	  
 		  <div class="weui_cells_title">请输入安全密码</div>
 		  <div class="weui_cells weui_cells_form">
 	      <div class="weui_cell">
@@ -305,8 +267,10 @@
 	    <div class="bd">
 	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
 	    </div>
-	  </div>   
+	  </div>  
   </div>
+
+
 
 	<!-- start javascript -->
 	<script type="text/javascript" src="js/touch.js"></script>
