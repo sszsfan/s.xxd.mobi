@@ -39,6 +39,9 @@ function moveElement(elementID,final_x,interval) {
 }
 */
 function showMenu (){
+	if(!document.getElementById("js_open_menubox")) return false;
+	if(!document.getElementById("js_show_menuwrap")) return false;
+	if(!document.getElementById("js_show_menubox")) return false;
 	var btn = document.getElementById("js_open_menubox");  //按钮
 	var wrap = document.getElementById("js_show_menuwrap"); //覆盖层
 	var box = document.getElementById("js_show_menubox");  //弹出层
