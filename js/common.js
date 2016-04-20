@@ -307,7 +307,7 @@ jQuery(document).ready(function($){
 	  	});
 	  });		
 	}
-  stopScroll();
+	stopScroll();
 
 	/*wrap.addEventListener('touchmove', function(event) {
 		 // 如果这个元素的位置内只有一个手指的话
@@ -318,4 +318,34 @@ jQuery(document).ready(function($){
 			moveElement("js_show_menubox",-300,10);
 			}
 	}, false);  */ 
+	//通知页面-弹出下拉内容
+	var m=-1;
+	$(".notice_title").each(function(index){
+		$(this).click(function(){
+			//$(".notice_details:eq("+index+")").slideToggle();
+			if(m != index){
+				m = index;
+				$(".notice_title").removeClass("notice_title2");
+				$(".up").removeClass("down");
+				$(this).addClass("notice_title2");
+				$(".notice_details:gt("+index+")").slideUp("fast");
+				$(".notice_details:lt("+index+")").slideUp("fast");
+				$(".notice_details:eq("+index+")").slideToggle("fast");
+				$(".up:eq("+index+")").addClass("down");
+			}else{
+				$(".up").removeClass("down");
+				$(this).removeClass("notice_title2");
+				$(".notice_details:eq("+index+")").slideToggle("fast");
+				m = -1;
+			}
+			
+		});
+	});
+
+	//签到成功通知
+	$("#js_check_in").bind("click",function(){
+		$("#js_checked_success").removeClass("checked_success1").addClass("checked_success2").fadeOut("slow");
+		$("#js_check_in").fadeOut("normal");
+		$("#js_checked").fadeIn("normal");
+	});
 });

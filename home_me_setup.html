@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="renderer" content="webkit">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<title>王二五</title>
+	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
+	<link href="styles/common.css" rel="stylesheet" type="text/css">
+</head>
+<body class="js_modal_open bd_scroll">
+	<div class="top_toolbar">
+		<div class="open_menubox" id="js_open_menubox">
+			<a href="javascript:void(0);">菜单</a>
+		</div>
+		<!-- //open_menubox -->
+		<div class="top_toolbar_content">
+			设置
+		</div>
+		<a class="notice" href="home_notice.html">
+			<i></i>
+			<span>22</span>
+		</a>
+		<!-- //top_toolbar_content -->
+	</div><!-- //top_toolbar -->
+	
+	<div class="main">
+    <div class="weui_cells">
+      <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>头像</p>
+        </div>
+        <div class="weui_cell_ft">
+          	<div class="imgbox">
+				<img src="images/avatar_user1.png" class="img60" />
+			</div>
+        </div>
+      </div>
+    </div>	
+		<div class="weui_cells weui_cells_access">
+      <a class="weui_cell js_change_btn" href="javascript:void(0);">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>姓名</p>
+          </div>
+          <div class="weui_cell_ft">王大五</div>
+      </a>
+      <a class="weui_cell js_change_btn" href="javascript:void(0);">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>手机号码</p>
+          </div>
+          <div class="weui_cell_ft">13678789898</div>
+      </a>
+      <!-- 
+      <a class="weui_cell" href="safety_password.html">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>安全密码</p>
+          </div>
+          <div class="weui_cell_ft">******</div>
+      </a>
+      -->
+    </div>	        
+    <div class="weui_cells">
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>展示项目</p>
+          </div>
+          <div class="weui_cell_ft">项目值</div>
+      </div>
+      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+              <p>展示项目</p>
+          </div>
+          <div class="weui_cell_ft">项目值</div>
+      </div>
+    </div> 
+	</div>
+	<!-- //main -->
+	
+	<!-- //显示菜单 开始 -->
+	<div class="show_menubox_transition1" id="js_show_menuwrap"></div>  
+
+	<div class="show_menubox_content1" id="js_show_menubox">
+		<div class="show_userinfo">
+			<div class="user_avatar">
+				<img src="images/avatar_user1.png" />
+			</div>
+			<div class="user_info">
+				<div class="name">王小龙</div>
+				<div class="mobi">13699199469</div>
+			</div>
+		</div>
+		<!-- //show_userinfo -->
+	    <div class="show_menu">
+			<div class="xxd_cells">
+				<a class="xxd_cell" href="home_index.html">
+		            <div class="xxd_cell_icon"></div>
+	                <div class="xxd_cell_bd">
+	                    <p>首页</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_order_manage.html">
+		            <div class="xxd_cell_icon"></div>
+	                <div class="xxd_cell_bd">
+	                    <p>订单管理</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_notice.html">
+	                <div class="xxd_cell_bd">
+	                    <p>通知</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_me_setup.html">
+	                <div class="xxd_cell_bd">
+	                    <p>设置</p>
+	                </div>
+	            </a>
+	        </div>
+		</div>
+		<!-- //show_menu -->
+	</div>
+	<!-- //show_menubox_content -->	
+
+	<!-- //显示菜单 结束 -->
+	
+	<!-- 压栈显示 更改姓名、手机号码、安全密码 -->
+	<div class="main2 is_hidden" id="js_main_info">
+		<!-- //提示 开始 -->
+		<div class="modal js_modal_001">
+		  <div class="modal_dialog_tips showtips">
+		    <div class="modal_content">
+		    	<div class="mcs_img">
+		    		<div class="loadingbox" style="display:none;">
+						<img src="images/loading.gif">
+					</div>
+					<!-- //处理中 -->
+					<div class="successbox">
+						<span class="icon"></span>
+					</div>
+					<!-- //处理成功 -->
+					<div class="failurebox"  style="display:none;">
+						<span class="icon"></span>
+					</div>
+					<!-- //处理失败 -->
+		    	</div>
+		    	<div class="mcs_text">
+		    		已发送
+		    	</div>
+		    </div>
+		  </div>
+		  <div class="modal_cover"></div>
+		</div>
+		<!-- //提示 结束 --> 
+		<div class="js_change_info hidden">
+			<div class="top_toolbar2">
+				<div class="close_show_page js_close_show_page2">
+					<a href="javascript:void(0);">关闭</a>
+				</div>
+				<div class="top_toolbar_content">
+					姓名设置
+				</div>
+			</div>
+		  <div class="weui_cells_title">请输入姓名</div>
+		  <div class="weui_cells weui_cells_form">
+	      <div class="weui_cell">
+          <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="请输入姓名">
+          </div>
+	      </div>
+		  </div>
+	    <div class="bd">
+	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
+	    </div>
+	  </div> 
+
+	  <div class="js_change_info hidden">
+			<div class="top_toolbar2">
+				<div class="close_show_page js_close_show_page2">
+					<a href="javascript:void(0);">关闭</a>
+				</div>
+				<div class="top_toolbar_content">
+					手机号码设置
+				</div>
+			</div>
+		  <div class="inputbox">
+				<div class="inputarea have_button border_line border_b">
+					<div class="iname">+86</div>
+					<input type="tel" class="inputtext" placeholder="手机号码" tabindex="1" autofocus="">
+					<a href="javascript:void(0);" class="getsms btn btn_green disable js_button_001">获取</a>
+				</div>
+				<div class="inputarea border_line border_b">
+					<div class="iname">验证码</div>
+					<input type="tel" class="inputtext" placeholder="短信验证码" tabindex="2">
+				</div>
+			</div>	
+	    <div class="bd">
+	      <a href="javascript:void(0);" class="weui_btn weui_btn_primary js_close_btn">确认</a>
+	    </div>
+	  </div>  
+  </div>
+
+	<!-- start javascript -->
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- end javascript -->
+</body>
+</html>

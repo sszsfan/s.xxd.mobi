@@ -47,6 +47,7 @@ body.bg_white {background: #fff;}
 .color_yellow {color: #f90;}
 .color_green {color: #3dc700;}
 .color_grey {color: #ccc;}
+.bgcolor_white{background-color: #fff;}
 .bold {font-weight: bold;}
 .fsize20 {font-size: 20px;}
 .data_none {text-align: center;font-size: 22px;color:#999;padding: 60px 0;display:block;}
@@ -76,7 +77,7 @@ body.bg_white {background: #fff;}
 
 /* 通用按钮 开始 */
 .btn{font-size:16px;font-weight:500;height:40px;line-height:40px;display:inline-block;text-align:center;border:0;cursor:pointer;padding:0 20px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-appearance:none}
-.btn_s{;font-weight:400;height:30px;line-height:30px;display:inline-block;text-align:center;border:0;cursor:pointer;padding:0 10px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-appearance:none}
+.btn_s{;font-weight:400;height:30px;line-height:30px;display:inline-block;text-align:center;border:1px solid #d9d9d9;cursor:pointer;padding:0 10px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-appearance:none;color:#3dc700;}
 .btn.btn_screen {width: 100%;padding: 0;}
 .btn_blue,a.btn_blue{background:#167efb;color:#fff}
 .btn_blue:hover,.btn_blue:active,a.btn_blue:hover,a.btn_blue:active{background:#3c92fa;color:#fff}
@@ -84,13 +85,14 @@ body.bg_white {background: #fff;}
 .btn_grey:hover,.btn_grey:active,a.btn_grey:hover,a.btn_grey:active{background:#eee;color:#000}
 .btn_red,a.btn_red{background:#f00;color:#fff}
 .btn_red:hover,.btn_red:active,a.btn_red:hover,a.btn_red:active{background:#f66;color:#fff}
-.btn_green,a.btn_green{background:#3dc700;color:#fff}
+.btn_green,a.btn_green{background:#3dc700;color:#fff; border:1px solid #3dc700;}
 .btn_green:hover,.btn_green:active,a.btn_green:hover,a.btn_green:active{background:#56e317;color:#fff}
 .btn_white,a.btn_white{background:#fff;color:#167efb;border:1px solid #e7e7e7;}
 .btn_white:hover,.btn_white:active,a.btn_white:hover,a.btn_white:active{background:#f8f8f8;color:#000;border:1px solid #e8ebf1;text-decoration: none;}
 .btn_white_white,a.btn_white_white{background:rgba(255,255,255,1);color:#336699;}
 .btn_white_white:hover,.btn_white_white:active,a.btn_white_white:hover,a.btn_white_white:active{background:rgba(255,255,255,0.7);color:#336699;text-decoration: none;}
-
+.btn_yellow,a.btn_yellow{background-color: #f5a622; color:#fff; border:1px solid #f5a622;}
+.btn_yellow:hover{background-color:#f8c622;}
 .btn.disable,.btn_s.disable {opacity: 0.4;cursor: not-allowed;}
 input[disabled],
 input[readonly],
@@ -220,6 +222,9 @@ textarea[readonly] {
 .top_toolbar .tool_button a {height: 40px;overflow: hidden;line-height: 40px;text-align: right;padding:0 5px; display: inline-block;border-radius: 6px;}
 .top_toolbar .tool_button a:active {background-color: #e7e7e7;}
 
+.top_toolbar .notice{position:absolute; right:10px; top:7px; width:35px;height:35px;}
+.top_toolbar .notice i{position:absolute;left:0; bottom:0; z-index: 1; width:28px; height:28px; background:url(../images/icon6.png) no-repeat scroll 0 0; background-size: 28px 28px; }
+.top_toolbar .notice span{position:absolute; top:0; right:0; z-index:2; width:22px;height:22px;background-color:#d00c16; border-radius: 50%; color:#fff;}
 /* 顶部工具栏 结束 */
 
 /* 选择时间工具栏 开始 */
@@ -318,7 +323,7 @@ textarea[readonly] {
 
 /* 中间内容 开始 */
 .main {padding-top: 50px;}
-
+.main.order_detail_2{padding-bottom:52px;}
 
 
 
@@ -629,7 +634,6 @@ word-break:break-all;color: #000;text-align: right;}
 
 .user_info_box .user_avatar {width: 70px;height: 70px;position: absolute;left: 0px;top:0px;}
 .user_info_box .user_avatar img {width: 70px;height: 70px;border-radius: 6px;}
-.user_info_box .user_info {}
 .user_info_box .user_info .name {color: #000;font-size: 15px;}
 
 
@@ -728,7 +732,190 @@ word-break:break-all;color: #000;text-align: right;}
 
 
 
+/* 家政主页 开始 */
+.home_index p.address{font-size: 12px;}
+.home_index .next_order{font-size:12px; }
+.main a.check_in{position:absolute; top:30px; right:28px; display:block; width:36px; background-color:#efa625; color:#fff; font-weight: 400; border-color: #efa625;}
+.main a.check_invalid{background-color:#cfcfcf; right:90px; border-color:#cfcfcf;} 
+.main a.checked{position:absolute; top:30px; right:28px; background-color:#cfcfcf; color:#fff; font-weight: 400; border-color:#cfcfcf;}
+.main a.check_in.hidden{display:none;}
+.main a.checked.hidden{display:none;}
+.f_gray {color:#6b6b6b;}
+.main .order_info{font-size: 14px; color:#000 !important; }
+.order_more_info{
+    padding:10px 0; 
+    display: box;
+    display: -ms-box;
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.order_more_info a{
+    display: block;
+    margin: 0 10px;
+    flex: 1;
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+.top_line, .bottom_line{position:relative;}
+.top_line:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:1px;
+    border-top:1px solid #d9d9d9;
+    transform: scaleY(.5);
+    transform-origin: 0 -100%;
+    -webkit-transform-origin: 0 -100%;
+}
+.bottom_line:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:1px;
+    border-top:1px solid #d9d9d9;
+    transform: scaleY(.5);
+    transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+}
+.main .orders_info{overflow: hidden; margin:10px auto; background-color:#fff;}
+.main .orders_info a{float:left; width:50%;padding:10px 0; text-align: center;}
+.orders_info a h4{font-size: 18px; color:#ff0000;}
+.orders_info a p{color:#151515;}
+.grids{position:relative;}
+.grid{position: relative;}
+.grids:after, .grids:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    color:#d9d9d9;
+    -webkit-transform-origin:0 0;
+}
+.grids:before{
+    width:100%;
+    height:1px;
+    border-top:1px solid #d9d9d9;
+    transform-origin: 0 0;
+    -webkit-transform:scaleY(.5);
+    transform: scaleY(.5);
+}
+.grids:after{
+    width:1px;
+    height:100%;
+    border-left:1px solid #d9d9d9;
+    transform-origin: 0 0;
+    -webkit-transform:scaleX(.5);
+    transform: scaleX(.5);
+}
+.grid:after, .grid:before {
+    content:" ";
+    position: absolute;
+    color:#d9d9d9;
+    -webkit-transform-origin: 0 100%;
+}
+.grid:before{
+    right:0;
+    top:0;
+    width:1px;
+    height:100%;
+    border-right:1px solid #d9d9d9;
+    transform-origin: 0 100%;
+    transform: scaleX(.5);
+    right:-1px;
+}
+.grid:after{
+    left:0;
+    bottom:0;
+    height:1px;
+    width:100%;
+    border-bottom:1px solid #d9d9d9;
+    transform-origin: 0 100%;
+    transform: scaleY(.5);
+}
+.btn_bg_white{background-color: #fff; padding:10px;}
+.btn_bg_white button{background-color: #fff; border:1px solid #d9d9d9;}
+/*弹出签到成功*/
+.checked_success1 {position:fixed; bottom:-150px; left:0; right:0; z-index:3; width:150px; height:150px; margin: 0 auto; }
+.checked_success2 {position:fixed; bottom:50%; left:0; right:0; z-index:3;  width:150px; height:150px; margin: 0 auto; transition: all 0.5s ease-out; }
+img.success_icon {width:150px; height:150px;}
+/* 家政主页 结束 */
 
+/* 订单管理页面 开始 */
+.top_toolbar .top_toolbar_content span{position:absolute; top:9px; right:10px; }
+.top_toolbar .top_toolbar_content span a.btn_s{color:#fff;border:1px solid #167efb; border-radius: 3px; font-size: 14px; padding:0 15px; background-color: #4a90ea;}
+.order_manage .orders_manage_info{overflow: hidden; margin:0 auto; background-color:#fff;}
+.order_manage .orders_manage_info.grids:before{border-top:none;}
+.order_manage .orders_manage_info a{float:left; width:33.3%;padding:15px 0;text-align: center; color:#000;}
+.order_manage .orders_manage_info a.pending_orders{background-color: #eaeaea; color:#3dc700;}
+.order_manage p{font-size: 14px; height:22px;line-height: 22px;}
+.order_manage p.top{position:relative;}
+.order_manage p.top .settle_accounts{position:absolute; right:10px;}
+.order_manage p.address{font-size: 12px; height:18px; line-height: 18px; color:#6b6b6b;}
+.order_more_info a .icon1{position:relative; top:4px; margin-right:5px; display:inline-block; width:20px; height:20px; background:url(../images/icon1.png) no-repeat scroll 0 0; background-size: 20px 20px;}
+.order_more_info a .icon2{position:relative; top:4px; margin-right:5px; display:inline-block; width:20px; height:20px; background:url(../images/icon2.png) no-repeat scroll 0 0; background-size: 20px 20px;}
+/*弹出层*/
+.mask_1 {position:fixed;top:0;right:0;bottom:0;left:0;background-color: rgba(0, 0, 0, 0.8); z-index:1001; opacity:0; transition: opacity 0.3s 0s, visibility 0s 0.3s; visibility: hidden;}
+.mask_2 {position:fixed;top:0;right:0;bottom:0;left:0;background-color: rgba(0, 0, 0, 0.8); z-index:1001; opacity:1; transition: opacity 0.3s 0s, visibility 0s 0s; visibility: visible;}
+.wrapper_1 {position:fixed; bottom:-250px; left:0; right:0; z-index:1002; transition: all 0.3s linear;}
+.wrapper_2 {position:fixed; bottom:0px; left:0; right:0; z-index:1002; transition: all 0.3s linear;}
+.wrap_content{background-color: #fff; text-align: center; color:#000;}
+.wrap_content .top{height:40px;line-height: 40px; font-size: 16px;padding-bottom:5px;}
+.wrap_content .middle{padding-top:20px; padding-bottom:40px; font-size: 16px;}
+.wrap_content .middle p{height:40px; line-height: 40px;}
+.wrap_content .bottom{padding:10px;}
+.wrap_content .bottom .confirm{background-color: #fff;border:1px solid #d9d9d9; color:#6b6b6b;}
+.wrap_content .bottom .confirm:hover{background-color: #f6f6f6;}
+.close_wrap{position:absolute;top:10px; left:10px; display:block;width:20px;height:20px; background:url("../images/icon.png") no-repeat scroll -10px -73px ;background-size:92px 400px;}
+/* 订单管理页面 结束 */
+/* 通知页面 开始*/
+#notice_list i{position:absolute; top:11px; left:15px; display:block; width:9px; height:9px; border-radius: 50%; border:1px solid #d8d8d8; background-color: #d8d8d8;}
+#notice_list p{line-height: 24px;}
+#notice_list .notice_title i.b_red{border-color: #d0011a; background-color: #d0011a;}
+.notice_title{position:relative; padding:5px 30px;background-color: #fff;}
+.notice_title2{background-color: #efeff4;}
+.notice_title span.up {position:absolute; top:16px; right:10px; width:18px; height:14px; background:url(../images/notice_icon1.png) no-repeat scroll 0 0; background-size: 18px 14px;}
+.notice_title span.down {position:absolute; top:16px; right:10px; width:18px; height:14px; background:url(../images/notice_icon2.png) no-repeat scroll 0 0; background-size: 18px 14px;}
+.notice_details{position:relative; padding:5px 40px 5px 30px; display:none;}
+/* 通知页面 结束*/
+/* 订单详情2页面 开始 */
+.order_footer{position:fixed;bottom:0;left:0;right:0;height:50px; background-color:#f6f6f6;}
+.order_footer .order_more_info .btn_s{background-color:#3dc700; border-color:#3dc700; color:#fff;}
+.order_detail_info {background-color: #fff; padding:20px;}
+.order_tb {color:#000;}
+.order_tb {line-height: 22px;}
+.order_tb .td1{width:80px; color:#6b6b6b;}
+.cancel_order{margin:20px 10px;}
+.cancel_order .btn_s{width:100%; padding:0; background-color:#fff;border:1px solid #ff0000; border-radius: 3px;-moz-border-radius:3px;-webkit-border-radius:3px;-webkit-appearance:none; color: #ff0000;}
+.top_toolbar .open_menubox a.icon3{ background:url("../images/icon3.png") no-repeat scroll center; background-size: 26px 23px;}
+.cancel_reason p{text-align: left;}
+/* 订单详情2页面 结束 */
+/* 订单结算页面 开始 */
+.settle_accounts .time_set {position:relative;}
+.settle_accounts .time_set .sets{position:absolute; height:30px; width:130px;line-height: 30px; right:10px; top:50%; margin-top:-15px;}
+.settle_accounts .time_set .sets span{display:inline-block;width:60px;padding:0 5px; text-align: center;}
+.settle_accounts .time_set .icon1{display:inline-block;width:30px; height:30px; background:url(../images/icon4.png) no-repeat scroll 0 0; background-size:30px 30px; text-indent: -9999px;}
+.settle_accounts .time_set .icon2{display:inline-block;width:30px; height:30px; background:url(../images/icon5.png) no-repeat scroll 0 0; background-size:30px 30px; text-indent: -9999px;}
+.price_list {margin:10px auto; background-color:#fff; padding-left:15px; line-height: 30px;}
+.price_list p{position: relative;}
+.price_list p span.f_right{position:absolute; right:10px; color:#ff0000;}
+.order_footer .order_more_info .btn_s_blue{background-color:#4a90ea; border-color:#4a90ea; }
+/*弹出内容*/
+.wrap_content .middle h4{font-size:30px; height:50px; line-height: 50px; color:#ff0000; font-weight: normal;}
+.btn_bg_white button.button_blue{background-color:#4a90ea; border-color:#4a90ea;}
+.btn_bg_white button.button_green{background-color:#3dc700; border-color:#3dc700;}
+.btn_bg_white button.b_color_red{border-color:#ff0000;}
+/* 订单结算页面 结束 */
 
 /* 弹出层 开始 */
 /* 弹出层 开始 */

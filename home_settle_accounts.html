@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <title>王二五</title>
+    <link href="styles/weui.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/common.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="top_toolbar">
+        <div class="open_menubox">
+            <a class="icon3" href="home_order_detail_2.html">菜单</a>
+        </div>
+        <!-- //open_menubox -->
+        <div class="top_toolbar_content">
+            结算<span><a href="home_settle_accounts.html" class="btn_s" >刷新</a></span>
+        </div>
+        <!-- //top_toolbar_content -->
+    </div><!-- //top_toolbar -->
+    
+    <div class="main settle_accounts">
+        <div class="weui_cells weui_cells_access">
+            <a class="weui_cell" href="javascript:;">
+                <div class="weui_cell_bd weui_cell_primary">
+                     <p>服务项目&nbsp;&nbsp;&nbsp;<span>家庭保洁</span></p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+            </a>
+            <a class="weui_cell time_set" href="javascript:;">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>服务时长</p>
+                </div>
+                <div class="sets">
+                    <i class="icon1">1</i><span>2.5小时</span><i class="icon2">2</i>
+                </div>
+            </a>
+        </div>
+        <div class="weui_cells weui_cells_form">
+            <div class="weui_cell weui_cell_switch">
+                <div class="weui_cell_hd weui_cell_primary">自带洁济&nbsp;&nbsp;&nbsp;<span class="color_red">(+5元/小时)</span></div>
+                <div class="weui_cell_ft">
+                    <input class="weui_switch" type="checkbox"/>
+                </div>
+            </div>
+        </div>
+        <div class="price_list">
+            <p>服务总额<span class="f_right">50.00</span></p>
+            <p>清洁剂<span class="f_right">12.50</span></p>
+            <p>优惠券<span class="f_right">-28.00</span></p>
+            <p>客户应付总额<span class="f_right">34.50</span></p>
+        </div>
+    </div>
+    <div class="order_footer">  
+        <div class="order_more_info top_line">
+            <a href="javascript:;" class="btn_s btn_s_blue" id="js_control_btn001">余额代收</a>
+            <a href="tel:10086" class="btn_s" id="js_control_btn002">线上代收</a>
+        </div>
+    </div>  
+
+    <!-- 弹出层1 -->
+    <div class="js_mask mask_1"></div>
+    <div class="js_wrapper wrapper_1">
+        <div class="wrap_content">
+            <div class="top bottom_line">
+                <p>余额代收</p>
+                <span class="close_wrap js_close_wrap"></span>
+            </div>
+            <div class="middle">
+                <p>请确认您已收到金额</p>
+                <h4>34.50</h4>
+            </div>
+            <div class="btn_bg_white top_line">
+                <button class="btn button_blue btn_screen" onclick="location.href='home_success.html'">确认代收</button>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出层2 -->
+    <div class="js_mask mask_1"></div>
+    <div class="js_wrapper wrapper_1">
+        <div class="wrap_content">
+            <div class="top bottom_line">
+                <p>线上代收</p>
+                <span class="close_wrap js_close_wrap"></span>
+            </div>
+            <div class="middle">
+                <p>请确认您已收到金额</p>
+                <h4>34.50</h4>
+            </div>
+            <div class="btn_bg_white top_line">
+                <button class="btn button_green btn_screen" onclick="location.href='home_success.html'">微信支付</button>
+            </div>
+        </div>
+    </div>
+    <!-- start javascript -->
+    <script type="text/javascript" src="js/touch.js"></script>
+    <script type="text/javascript" src="js/myjs.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/common.js"></script>
+    <!-- end javascript -->
+</body>
+</html>

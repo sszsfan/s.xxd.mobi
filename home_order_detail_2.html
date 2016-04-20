@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="renderer" content="webkit">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<title>王二五</title>
+	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
+	<link href="styles/common.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<div class="top_toolbar">
+		<div class="open_menubox">
+			<a class="icon3" href="home_order_manage.html">菜单</a>
+		</div>
+		<!-- //open_menubox -->
+		<div class="top_toolbar_content">
+			订单详情<span><a href="home_order_detail_2.html" class="btn_s" >刷新</a></span>
+		</div>
+		<!-- //top_toolbar_content -->
+	</div><!-- //top_toolbar -->
+	
+	<div class="main order_detail_2">
+		<div class="order_detail_info bottom_line">
+			<table class="order_tb">
+				<tr>
+					<td class="td1">订单状态：</td>
+					<td class="color_green">待服务</td>
+				</tr>
+				<tr>
+					<td class="td1">订单类别：</td>
+					<td>家庭保洁</td>
+				</tr>
+				<tr>
+					<td class="td1">服务时长：</td>
+					<td>2016-04-12&nbsp;13:00</td>
+				</tr>
+				<tr>
+					<td class="td1">预计时长：</td>
+					<td>2小时</td>
+				</tr>
+				<tr>
+					<td class="td1">服务地点：</td>
+					<td>长沙市岳麓区麓云路18号长沙创业服务中心固特邦创业基地508室</td>
+				</tr>
+				<tr>
+					<td class="td1">订单计价：</td>
+					<td>30.00元/小时</td>
+				</tr>
+				<tr>
+					<td class="td1">自带清洁：</td>
+					<td>否</td>
+				</tr>
+				<tr>
+					<td class="td1">客户电话：</td>
+					<td class="color_blue">13678789898</td>
+				</tr>
+			</table>
+		</div>
+		<div class="order_more_info bgcolor_white top_line">
+        	<a href="javascript:;" class="btn_s"><i class="icon1"></i>查看路线</a>
+			<a href="tel:10086" class="btn_s"><i class="icon2"></i>联系客户</a>
+        </div>
+		<div class="cancel_order">
+			<a href="javascript:;" class="btn_s bgcolor_white btn_screen" id="js_control_btn001">取消订单</a>
+		</div>
+	</div>
+	<div class="order_footer">	
+		<div class="order_more_info top_line">
+	    	<a href="home_settle_accounts.html" class="btn_s btn_screen">结算</a>
+	    </div>
+	</div>	
+
+	<!-- //弹出层 开始 -->
+	<div class="js_mask mask_1"></div>
+	<div class="js_wrapper wrapper_1">
+		<div class="wrap_content">
+			<div class="top bottom_line">
+				<p>请选择取消原因</p>
+				<span class="close_wrap js_close_wrap"></span>
+			</div>
+			<div class="cancel_reason">
+			    <div class="weui_cells weui_cells_radio">
+			        <label class="weui_cell weui_check_label" for="x11">
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <p>客户主动取消</p>
+			            </div>
+			            <div class="weui_cell_ft">
+			                <input type="radio" class="weui_check" name="radio1" id="x11">
+			                <span class="weui_icon_checked"></span>
+			            </div>
+			        </label>
+			        <label class="weui_cell weui_check_label" for="x12">
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <p>联系不上客户</p>
+			            </div>
+			            <div class="weui_cell_ft">
+			                <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+			                <span class="weui_icon_checked"></span>
+			            </div>
+			        </label>
+			        <label class="weui_cell weui_check_label" for="x13">
+			            <div class="weui_cell_bd weui_cell_primary">
+			                <p>个人原因</p>
+			            </div>
+			            <div class="weui_cell_ft">
+			                <input type="radio" name="radio1" class="weui_check" id="x13">
+			                <span class="weui_icon_checked"></span>
+			            </div>
+			        </label>
+			    </div>
+			</div>
+			<div class="btn_bg_white top_line">
+				<button class="btn b_color_red btn_screen" id="js_close_wrap2">确认取消</button>
+			</div>
+		</div>
+	</div>
+	<!-- //弹出层 结束 -->	
+	<!-- start javascript -->
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- end javascript -->
+</body>
+</html>

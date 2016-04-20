@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="renderer" content="webkit">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<title>王二五</title>
+	<link href="styles/weui.min.css" rel="stylesheet" type="text/css">
+	<link href="styles/common.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="top_toolbar">
+		<div class="open_menubox" id="js_open_menubox">
+			<a href="javascript:void(0);">菜单</a>
+		</div>
+		<!-- //open_menubox -->
+		<div class="top_toolbar_content">
+			华天e生活
+		</div>
+		<a class="notice" href="home_notice.html">
+			<i></i>
+			<span>22</span>
+		</a>
+		<!-- //top_toolbar_content -->
+	</div><!-- //top_toolbar -->
+	
+	<div class="main home_index">
+		<div class="weui_cells weui_cells_access" style="margin-top: 0;">
+            <a class="weui_cell" href="">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="user_info_box">
+						<div class="user_avatar">
+							<img src="images/avatar_user1.png" />
+						</div>
+						<div class="user_info">
+							<div class="name">王小龙</div>
+							<div class="mobi">13699199469</div>
+						</div>
+					</div>
+					<!-- //user_info_box -->
+                </div>
+                <div class="weui_cell_ft"></div>
+            </a>
+            <a href="javascript:;" class="btn_s check_in" id="js_check_in">签到</a>
+            <a href="javascript:;" class="btn_s check_in check_invalid" id="js_control_btn001">签到</a>
+            <a href="javascript:;" class="btn_s checked hidden" id="js_checked">已签到</a>
+        </div>
+        <div class="weui_cells_title next_order">您的下一单</div>
+        <div class="weui_cells weui_cells_access">
+            <a class="weui_cell order_info" href="home_order_detail_2.html">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>04月20日&nbsp;（今天）&nbsp;08:00&nbsp;&nbsp;<span class="f_gray">擦玻璃</span></p>
+                    <p class="address">长沙市&nbsp;岳麓区&nbsp;麓云路18号</p>
+                </div>
+                <div class="weui_cell_ft"></div>
+            </a>
+            <div class="order_more_info top_line">
+            	<a href="javascript:;" class="btn_s"><i class="icon1"></i>查看路线</a>
+				<a href="tel:10086" class="btn_s"><i class="icon2"></i>联系客户</a>
+            </div>
+        </div>
+		
+		<div class="orders_info grids">
+			<a href="javascript:;" class="grid">
+				<h4>12</h4>
+				<p>待接单</p>
+			</a>
+			<a href="javascript:;" class="grid">
+				<h4>9</h4>
+				<p>未结算</p>
+			</a>
+		</div>
+	</div>
+	<!-- //main -->
+	
+	<!-- //显示菜单 开始 -->
+	<div class="show_menubox_transition1" id="js_show_menuwrap"></div>  
+
+	<div class="show_menubox_content1" id="js_show_menubox">
+		<div class="show_userinfo">
+			<div class="user_avatar">
+				<img src="images/avatar_user1.png" />
+			</div>
+			<div class="user_info">
+				<div class="name">王小龙</div>
+				<div class="mobi">13699199469</div>
+			</div>
+		</div>
+		<!-- //show_userinfo -->
+	    <div class="show_menu">
+			<div class="xxd_cells">
+				<a class="xxd_cell" href="home_index.html">
+		            <div class="xxd_cell_icon"></div>
+	                <div class="xxd_cell_bd">
+	                    <p>首页</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_order_manage.html">
+		            <div class="xxd_cell_icon"></div>
+	                <div class="xxd_cell_bd">
+	                    <p>订单管理</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_notice.html">
+	                <div class="xxd_cell_bd">
+	                    <p>通知</p>
+	                </div>
+	            </a>
+	            <a class="xxd_cell" href="home_me_setup.html">
+	                <div class="xxd_cell_bd">
+	                    <p>设置</p>
+	                </div>
+	            </a>
+	        </div>
+		</div>
+		<!-- //show_menu -->
+	</div>
+	<!-- //show_menubox_content -->	
+
+	<!-- //显示菜单 结束 -->
+	<!-- //弹出层 开始 -->
+	<div class="js_mask mask_1"></div>
+	<div class="js_wrapper wrapper_1">
+		<div class="wrap_content">
+			<div class="top bottom_line">
+				<p>提示</p>
+				<span class="close_wrap js_close_wrap"></span>
+			</div>
+			<div class="middle">
+				<p>签到时间为每日06:00至09:00</p>
+				<p>请按时签到哦~</p>
+			</div>
+			<div class="btn_bg_white top_line">
+				<button class="btn btn_screen" id="js_close_wrap2">我知道了</button>
+			</div>
+		</div>
+	</div>
+	<!-- //弹出层 结束 -->	
+	<!-- 弹出动画签到成功 开始 -->
+	<div class="checked_success1" id="js_checked_success">
+		<img class="success_icon" src="images/icon7.png" />
+	</div>
+	<!-- 弹出动画签到成功 结束 -->
+
+	<!-- start javascript -->
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- end javascript -->
+</body>
+</html>

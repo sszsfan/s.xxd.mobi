@@ -1,43 +1,3 @@
-function addLoadEvent(func) {
-  var oldonload = window.onload;
-  if (typeof window.onload != 'function') {
-    window.onload = func;
-  } else {
-    window.onload = function() {
-      oldonload();
-      func();
-    }
-  }
-}
-/*
-function moveElement(elementID,final_x,interval) {
-	var dwidth = -0.8*(document.body.scrollWidth);
-  if (!document.getElementById) return false;
-  if (!document.getElementById(elementID)) return false;
-  var elem = document.getElementById(elementID);
-  if (elem.movement) {
-    clearTimeout(elem.movement);
-  }
-  if (!elem.style.left) {
-    elem.style.left = dwidth + "px";
-  }
-  var xpos = parseInt(elem.style.left);
-  if (xpos == final_x) {
-    return true;
-  }
-  if (xpos < final_x) {
-    var dist = Math.ceil((final_x - xpos)/10);
-    xpos = xpos + dist;
-  }
-  if (xpos > final_x) {
-    var dist = Math.ceil((xpos - final_x)/10);
-    xpos = xpos - dist;
-  }
-  elem.style.left = xpos + "px";
-  var repeat = "moveElement('"+elementID+"',"+final_x+","+interval+")";
-  elem.movement = setTimeout(repeat,interval);
-}
-*/
 function showMenu (){
 	if(!document.getElementById("js_open_menubox")) return false;
 	if(!document.getElementById("js_show_menuwrap")) return false;
@@ -231,6 +191,70 @@ function stopScroll(){
 
 }
 
+function showWrapper(){
+	if(!document.getElementById("js_control_btn001")) return false;
+	var wraps = document.getElementsByClassName("js_wrapper");
+	var masks = document.getElementsByClassName("js_mask");
+	var btn = document.getElementById("js_control_btn001");
+	var btn2 = document.getElementById("js_control_btn002");
+	var closes = document.getElementsByClassName("js_close_wrap");
+	var closes2 = document.getElementById("js_close_wrap2");
+	function fun(e){
+		e.preventDefault();
+   	    e.stopPropagation();
+	}
+	btn.onclick = function(){
+		masks[0].setAttribute("class","js_mask mask_2");
+		wraps[0].setAttribute("class","js_wrapper wrapper_2");
+		document.addEventListener("touchmove",fun,false);
+	};
+	closes[0].onclick = function(){
+		masks[0].setAttribute("class","js_mask mask_1");
+		wraps[0].setAttribute("class","js_wrapper wrapper_1");
+		document.removeEventListener("touchmove",fun,false);
+	};
+	masks[0].onclick = function(){
+		masks[0].setAttribute("class","js_mask mask_1");
+    	wraps[0].setAttribute("class","js_wrapper wrapper_1");
+    	document.removeEventListener("touchmove",fun,false);
+	};
+	if(document.getElementById("js_close_wrap2")){
+		closes2.onclick = function(){
+			masks[0].setAttribute("class","js_mask mask_1");
+			wraps[0].setAttribute("class","js_wrapper wrapper_1");
+			document.removeEventListener("touchmove",fun,false);
+		};
+	}
+	if(document.getElementById("js_control_btn002")){
+		btn2.onclick = function(){
+			masks[1].setAttribute("class","js_mask mask_2");
+			wraps[1].setAttribute("class","js_wrapper wrapper_2");
+			document.addEventListener("touchmove",fun,false);
+		};
+		closes[1].onclick = function(){
+			masks[1].setAttribute("class","js_mask mask_1");
+			wraps[1].setAttribute("class","js_wrapper wrapper_1");
+			document.removeEventListener("touchmove",fun,false);
+		};
+		masks[1].onclick = function(){
+			masks[1].setAttribute("class","js_mask mask_1");
+			wraps[1].setAttribute("class","js_wrapper wrapper_1");
+			document.removeEventListener("touchmove",fun,false);
+		};
+	}
+}
 
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
 addLoadEvent(showMenu);
 addLoadEvent(stopScroll);
+addLoadEvent(showWrapper)
