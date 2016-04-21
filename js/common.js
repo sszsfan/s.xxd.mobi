@@ -344,8 +344,22 @@ jQuery(document).ready(function($){
 
 	//签到成功通知
 	$("#js_check_in").bind("click",function(){
-		$("#js_checked_success").removeClass("checked_success1").addClass("checked_success2").fadeOut("slow");
-		$("#js_check_in").fadeOut("normal");
-		$("#js_checked").fadeIn("normal");
+		var $box = $("#js_checked_success");
+		
+		
+		$box.animate({bottom: $(window).height()*2/3-150},100);
+
+		//$box.animate({top: $(window).height()/2});
+		for(var i=1; i<4; i++){
+			$box.animate({bottom: "+=15px"},50);
+			$box.animate({bottom: "-=10px"},50);	
+		}
+		function delayTime(){
+			//$box.delay(1000);
+			$box.removeClass("checked_success1").addClass("checked_success2");
+		}
+		setTimeout(delayTime,1000);
+		$box.delay(600).fadeOut(300);
+		$("#js_checked").delay(1000).fadeIn("normal");
 	});
 });

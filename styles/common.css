@@ -847,7 +847,7 @@ word-break:break-all;color: #000;text-align: right;}
 .btn_bg_white button{background-color: #fff; border:1px solid #d9d9d9;}
 /*弹出签到成功*/
 .checked_success1 {position:fixed; bottom:-150px; left:0; right:0; z-index:3; width:150px; height:150px; margin: 0 auto; }
-.checked_success2 {position:fixed; bottom:50%; left:0; right:0; z-index:3;  width:150px; height:150px; margin: 0 auto; transition: all 0.5s ease-out; }
+.checked_success2 {position:fixed; bottom:50%; left:0; right:0; z-index:3;  width:150px; height:150px; margin: 0 auto; transition: all 0.5s ease-out; transform:rotateY(360deg);-webkit-transform:rotateY(180deg);}
 img.success_icon {width:150px; height:150px;}
 /* 家政主页 结束 */
 
