@@ -869,7 +869,7 @@ img.success_icon {width:150px; height:150px;}
 .top_toolbar .top_toolbar_content span a.btn_s{color:#fff;border:1px solid #167efb; border-radius: 3px; font-size: 14px; padding:0 15px; background-color: #4a90ea;}
 .order_manage .orders_manage_info{overflow: hidden; margin:0 auto; background-color:#fff;}
 .order_manage .orders_manage_info.grids:before{border-top:none;}
-.order_manage .orders_manage_info a{float:left; width:33.3%;padding:15px 0;text-align: center; color:#000;}
+.order_manage .orders_manage_info a{float:left; width:25%;padding:15px 0;text-align: center; color:#000;}
 .order_manage .orders_manage_info a.pending_orders{background-color: #eaeaea; color:#3dc700;}
 .order_manage p{font-size: 14px; height:22px;line-height: 22px;}
 .order_manage p.top{position:relative;}
