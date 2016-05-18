@@ -362,4 +362,54 @@ jQuery(document).ready(function($){
 		$box.delay(600).fadeOut(300);
 		$("#js_checked").delay(1000).fadeIn("normal");
 	});
+
+	//四个参数分别表示：打开按钮、背景层、弹出层、关闭按钮的Class名(.class)或者id名（#id）
+	function showWrapper(btn,mask,wrap,close){
+		var wraps = $(wrap);
+		var masks = $(mask);
+		var btn = $(btn);
+		var closes = $(close);
+		
+		function fun(e){
+			/*e.preventDefault();
+	   	    e.stopPropagation();*/
+	   	    /*return ;*/
+	   	    if($(e.target).is("ul#slide_control")){
+				return true;
+			}else{
+				e.preventDefault();
+			}
+		}
+
+		btn.bind("click",function(){
+			
+			masks.addClass("mask_2");
+			wraps.addClass("wrapper_2");
+			$(document).bind("touchmove",fun);
+		});
+		closes.bind("click",function(){
+			masks.removeClass("mask_2");
+			wraps.removeClass("wrapper_2");
+			$(document).unbind("touchmove",fun);
+		});
+		masks.bind("click",function(){
+			masks.removeClass("mask_2");
+			wraps.removeClass("wrapper_2");
+			$(document).unbind("touchmove",fun);
+		});
+	}
+	showWrapper(".jq_btn_002",".jq_mask_002",".jq_wrapper_002",".jq_close_002");
+
+	function fontChange(){
+		var box = $("#slide_control");
+		$("#position").bind("DOMNodeInserted",function(){
+			var value = $("#position").val();
+			for(var i=0; i<4; i++){
+				if(value/4 == -i){
+					box.children("li").eq(i).css({"color":"red"});
+				}
+			}
+		});
+	}
+	
 });

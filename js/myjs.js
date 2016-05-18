@@ -244,6 +244,90 @@ function showWrapper(){
 	}
 }
 
+
+/*	var EventUtil = {
+		addHandler: function(element, type, handler){
+			if(element.addEventListener){
+				element.addEventListener(type, handler, false);
+			}else if(element.attachEvent){
+				element.attachEvent("on"+type, handler);
+			}else{
+				element["on"+type] = handler;
+			}
+		},
+		removeHandler: function(element, type, handler){
+			if(element.removeEventListener){
+				element.removeEventListener(type, handler, false);
+			}else if(element.detachEvent){
+				element.detachEvent("on"+type, handler);
+			}else{
+				element["on"+ type] = null;
+			}
+		}
+	}
+	*/
+	
+/*	function slideControl(){
+		var box = document.getElementById("slide_control");
+		var startP=0 ,moveP=0 ,endP=0 , dis=0, dd=0;
+		var epos = 0;
+		function fun1(){
+			box.addEventListener("touchstart",function(event){
+				startP = event.touches[0].pageY;
+			},false);
+			
+		}
+
+		function fun2(){
+			fun1();
+			box.addEventListener("touchmove",function(event){
+				event.preventDefault();
+				moveP = event.changedTouches[0].pageY;
+				dis = dd + moveP - startP;
+				box.style.top = dis + "px";
+				if(parseInt(box.style.top) <= -160){
+					box.style.top = "-160px";
+				}
+				if(parseInt(box.style.top) >= 40){
+					box.style.top = "40px";
+				}
+			},false);
+
+		}
+
+		function fun3(){
+			box.addEventListener("touchend",function(event){
+				endP = event.changedTouches[0].pageY;
+				dd = dd + endP - startP;
+				if(dd<=-120){
+					dd = -120;
+					box.style.top = "-120px";
+				}
+				if(dd>=0){
+					dd = 0;
+					box.style.top = "0px";
+				}
+				if(dd<0 && dd>-120){
+					
+					var res = parseInt(dd/40);
+					var rest = dd%40;
+					
+					if(rest<-20){
+						dd = (res-1)*40;
+						box.style.top = dd+"px";
+					}else{
+						
+						dd = res*40;
+						box.style.top = dd+"px";
+					}
+				}
+				dis = dd;
+			})
+		}
+		fun3();
+		fun2();
+	}*/
+
 function addLoadEvent(func) {
   var oldonload = window.onload;
   if (typeof window.onload != 'function') {
@@ -257,4 +341,5 @@ function addLoadEvent(func) {
 }
 addLoadEvent(showMenu);
 addLoadEvent(stopScroll);
-addLoadEvent(showWrapper)
+addLoadEvent(showWrapper);
+//addLoadEvent(slideControl);
